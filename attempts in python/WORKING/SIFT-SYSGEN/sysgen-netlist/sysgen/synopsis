@@ -1,0 +1,979 @@
+{
+  'attributes' => {
+    'HDLCodeGenStatus' => 0,
+    'HDL_PATH' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN',
+    'Impl_file' => 'ISE Defaults',
+    'Impl_file_sgadvanced' => '',
+    'Synth_file' => 'XST Defaults',
+    'Synth_file_sgadvanced' => '',
+    'TEMP' => 'C:/Users/gurur/AppData/Local/Temp',
+    'TMP' => 'C:/Users/gurur/AppData/Local/Temp',
+    'Temp' => 'C:/Users/gurur/AppData/Local/Temp',
+    'Tmp' => 'C:/Users/gurur/AppData/Local/Temp',
+    'base_system_period_hardware' => 10,
+    'base_system_period_simulink' => 1,
+    'block_icon_display' => 'Default',
+    'block_type' => 'sysgen',
+    'block_version' => '',
+    'ce_clr' => 0,
+    'clkWrapper' => 'sift_cw',
+    'clkWrapperFile' => 'sift_cw.vhd',
+    'clock_domain' => 'default',
+    'clock_loc' => '',
+    'clock_wrapper' => 'Clock Enables',
+    'clock_wrapper_sgadvanced' => '',
+    'compilation' => 'HDL Netlist',
+    'compilation_lut' => {
+      'keys' => [
+        'HDL Netlist',
+      ],
+      'values' => [
+        'target1',
+      ],
+    },
+    'compilation_target' => 'HDL Netlist',
+    'core_generation' => 1,
+    'core_generation_sgadvanced' => '',
+    'core_is_deployed' => 0,
+    'coregen_core_generation_tmpdir' => 'C:/Users/gurur/AppData/Local/Temp/sysgentmp-Gururaja/cg_wk/cdeeff1d6a1425030',
+    'coregen_part_family' => 'zynq',
+    'createTestbench' => 0,
+    'create_interface_document' => 'off',
+    'dbl_ovrd' => -1,
+    'dbl_ovrd_sgadvanced' => '',
+    'dcm_info' => {
+    },
+    'dcm_input_clock_period' => 10,
+    'deprecated_control' => 'off',
+    'deprecated_control_sgadvanced' => '',
+    'design' => 'sift',
+    'designFile' => 'sift.vhd',
+    'design_full_path' => 'E:\\PROJECTS\\FINAL YEAR PROJECT\\attempts in python\\SIFT-SYSGEN\\SIFT.slx',
+    'device' => 'xc7z010-1clg400',
+    'device_speed' => -1,
+    'directory' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/sysgen-netlist',
+    'dsp_cache_root_path' => 'C:/Users/gurur/AppData/Local/Temp/sysgentmp-Gururaja',
+    'entityNamingInstrs' => {
+      'nameMap' => undef,
+      'namesAlreadyUsed' => {
+        'default_clock_driver_SIFT' => 1,
+        'sift_cw' => 1,
+      },
+    },
+    'eval_field' => 0,
+    'fileAttributes' => {
+      'addsb_11_0_35d211e2def0b918.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_3d8cf21588249b20.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_560d455b50794abb.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_56b9435aefecd117.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_5c754caff9069ab6.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_82f401100ebaa8c1.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_9246ac4b72e27992.ngc' => {
+        'producer' => 'coregen',
+      },
+      'addsb_11_0_b552542673a5f445.ngc' => {
+        'producer' => 'coregen',
+      },
+      'bmg_72_033242f7d723cd85.mif' => {
+        'producer' => 'coregen',
+      },
+      'bmg_72_033242f7d723cd85.ngc' => {
+        'producer' => 'coregen',
+      },
+      'bmg_72_24c605b783a27b5e.mif' => {
+        'producer' => 'coregen',
+      },
+      'bmg_72_24c605b783a27b5e.ngc' => {
+        'producer' => 'coregen',
+      },
+      'bmg_72_d29df13d4088eb22.mif' => {
+        'producer' => 'coregen',
+      },
+      'bmg_72_d29df13d4088eb22.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cmlt_11_2_2741e2616b5bee56.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cmlt_11_2_722ae4aef5fbed76.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cmlt_11_2_995f6541e9724116.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cmlt_11_2_b013ceb6827b5584.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cmlt_11_2_bf2ab2cb66bd115e.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cmlt_11_2_e4343fec66bf498c.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cntr_11_0_2558e675d3844393.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cntr_11_0_c7036b5b76ba9652.ngc' => {
+        'producer' => 'coregen',
+      },
+      'cntr_11_0_dfa9dc46f057bab4.ngc' => {
+        'producer' => 'coregen',
+      },
+    },
+    'files' => [
+      'addsb_11_0_35d211e2def0b918.ngc',
+      'addsb_11_0_3d8cf21588249b20.ngc',
+      'addsb_11_0_560d455b50794abb.ngc',
+      'addsb_11_0_56b9435aefecd117.ngc',
+      'addsb_11_0_5c754caff9069ab6.ngc',
+      'addsb_11_0_82f401100ebaa8c1.ngc',
+      'addsb_11_0_9246ac4b72e27992.ngc',
+      'addsb_11_0_b552542673a5f445.ngc',
+      'bmg_72_033242f7d723cd85.mif',
+      'bmg_72_033242f7d723cd85.ngc',
+      'bmg_72_24c605b783a27b5e.mif',
+      'bmg_72_24c605b783a27b5e.ngc',
+      'bmg_72_d29df13d4088eb22.mif',
+      'bmg_72_d29df13d4088eb22.ngc',
+      'cmlt_11_2_2741e2616b5bee56.ngc',
+      'cmlt_11_2_722ae4aef5fbed76.ngc',
+      'cmlt_11_2_995f6541e9724116.ngc',
+      'cmlt_11_2_b013ceb6827b5584.ngc',
+      'cmlt_11_2_bf2ab2cb66bd115e.ngc',
+      'cmlt_11_2_e4343fec66bf498c.ngc',
+      'cntr_11_0_2558e675d3844393.ngc',
+      'cntr_11_0_c7036b5b76ba9652.ngc',
+      'cntr_11_0_dfa9dc46f057bab4.ngc',
+      'xlpersistentdff.ngc',
+      'synopsis',
+      'sift.vhd',
+      'xlpersistentdff.ngc',
+      'sift_cw.vhd',
+      'sift_cw.ucf',
+      'sift_cw.xdc',
+      'sift_cw.xcf',
+      'sift_cw.sdc',
+      'xst_sift.prj',
+      'xst_sift.scr',
+      'vcom.do',
+      'isim_sift.prj',
+      'globals',
+      'hdlFiles',
+    ],
+    'force_scheduling' => 0,
+    'fxdptinstalled' => 1,
+    'generateUsing71FrontEnd' => 1,
+    'generating_island_subsystem_handle' => 2078.00061035156,
+    'generating_subsystem_handle' => 2078.00061035156,
+    'generation_directory' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/sysgen-netlist',
+    'has_advanced_control' => 0,
+    'hdlDir' => 'D:/Xilinx/14.7/ISE_DS/ISE/sysgen/hdl',
+    'hdlKind' => 'vhdl',
+    'hdl_path' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN',
+    'impl_file' => 'ISE Defaults*',
+    'incr_netlist' => 'off',
+    'incr_netlist_sgadvanced' => '',
+    'infoedit' => ' System Generator',
+    'isdeployed' => 0,
+    'ise_version' => '14.7i',
+    'master_sysgen_token_handle' => 2079.69555664063,
+    'matlab' => 'D:/Matlab R2013a',
+    'matlab_fixedpoint' => 1,
+    'mdlHandle' => 2078.00061035156,
+    'mdlPath' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/SIFT.mdl',
+    'modelDiagnostics' => [
+      {
+        'count' => 2194,
+        'isMask' => 0,
+        'type' => 'SIFT Total blocks',
+      },
+      {
+        'count' => 2,
+        'isMask' => 0,
+        'type' => 'DiscretePulseGenerator',
+      },
+      {
+        'count' => 1,
+        'isMask' => 0,
+        'type' => 'FromWorkspace',
+      },
+      {
+        'count' => 449,
+        'isMask' => 0,
+        'type' => 'Inport',
+      },
+      {
+        'count' => 599,
+        'isMask' => 0,
+        'type' => 'Outport',
+      },
+      {
+        'count' => 906,
+        'isMask' => 0,
+        'type' => 'S-Function',
+      },
+      {
+        'count' => 218,
+        'isMask' => 0,
+        'type' => 'SubSystem',
+      },
+      {
+        'count' => 18,
+        'isMask' => 0,
+        'type' => 'Terminator',
+      },
+      {
+        'count' => 1,
+        'isMask' => 0,
+        'type' => 'ToWorkspace',
+      },
+      {
+        'count' => 16,
+        'isMask' => 1,
+        'type' => 'Virtex Line Buffer',
+      },
+      {
+        'count' => 30,
+        'isMask' => 1,
+        'type' => 'Virtex2 5 Line Buffer',
+      },
+      {
+        'count' => 138,
+        'isMask' => 1,
+        'type' => 'Virtex2 Line Buffer',
+      },
+      {
+        'count' => 149,
+        'isMask' => 1,
+        'type' => 'Xilinx Adder/Subtracter Block',
+      },
+      {
+        'count' => 120,
+        'isMask' => 1,
+        'type' => 'Xilinx Arithmetic Relational Operator Block',
+      },
+      {
+        'count' => 202,
+        'isMask' => 1,
+        'type' => 'Xilinx Constant Block Block',
+      },
+      {
+        'count' => 36,
+        'isMask' => 1,
+        'type' => 'Xilinx Constant Multiplier Block',
+      },
+      {
+        'count' => 154,
+        'isMask' => 1,
+        'type' => 'Xilinx Counter Block',
+      },
+      {
+        'count' => 66,
+        'isMask' => 1,
+        'type' => 'Xilinx Delay Block',
+      },
+      {
+        'count' => 16,
+        'isMask' => 1,
+        'type' => 'Xilinx Dual Port Random Access Memory Block',
+      },
+      {
+        'count' => 1,
+        'isMask' => 1,
+        'type' => 'Xilinx Gateway In Block',
+      },
+      {
+        'count' => 1,
+        'isMask' => 1,
+        'type' => 'Xilinx Gateway Out Block',
+      },
+      {
+        'count' => 7,
+        'isMask' => 1,
+        'type' => 'Xilinx Logical Block Block',
+      },
+      {
+        'count' => 16,
+        'isMask' => 1,
+        'type' => 'Xilinx Register Block',
+      },
+      {
+        'count' => 138,
+        'isMask' => 1,
+        'type' => 'Xilinx Single Port Random Access Memory Block',
+      },
+      {
+        'count' => 1,
+        'isMask' => 1,
+        'type' => 'Xilinx System Generator Block',
+      },
+    ],
+    'model_globals_initialized' => 1,
+    'model_path' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/SIFT.mdl',
+    'myxilinx' => 'D:/Xilinx/14.7/ISE_DS/ISE',
+    'netlistingWrapupScript' => 'java:com.xilinx.sysgen.netlister.DefaultWrapupNetlister',
+    'ngc_files' => [
+      'xlpersistentdff.ngc',
+    ],
+    'num_sim_cycles' => 10,
+    'package' => 'clg400',
+    'part' => 'xc7z010',
+    'partFamily' => 'zynq',
+    'port_data_types_enabled' => 1,
+    'preserve_hierarchy' => 0,
+    'proj_type' => 'Project Navigator',
+    'proj_type_sgadvanced' => '',
+    'report_true_rates' => 0,
+    'run_coregen' => 'off',
+    'run_coregen_sgadvanced' => '',
+    'sample_time_colors_enabled' => 0,
+    'sampletimecolors' => 0,
+    'sdcFile' => 'sift_cw.sdc',
+    'sg_blockgui_xml' => '',
+    'sg_icon_stat' => '50,50,-1,-1,token,white,0,07734,right,,[ ],[ ]',
+    'sg_list_contents' => '',
+    'sg_mask_display' => 'fprintf(\'\',\'COMMENT: begin icon graphics\');
+patch([0 50 50 0 0 ],[0 0 50 50 0 ],[1 1 1 ]);
+patch([1.6375 16.81 27.31 37.81 48.31 27.31 12.1375 1.6375 ],[36.655 36.655 47.155 36.655 47.155 47.155 47.155 36.655 ],[0.933333 0.203922 0.141176 ]);
+patch([12.1375 27.31 16.81 1.6375 12.1375 ],[26.155 26.155 36.655 36.655 26.155 ],[0.698039 0.0313725 0.219608 ]);
+patch([1.6375 16.81 27.31 12.1375 1.6375 ],[15.655 15.655 26.155 26.155 15.655 ],[0.933333 0.203922 0.141176 ]);
+patch([12.1375 48.31 37.81 27.31 16.81 1.6375 12.1375 ],[5.155 5.155 15.655 5.155 15.655 15.655 5.155 ],[0.698039 0.0313725 0.219608 ]);
+fprintf(\'\',\'COMMENT: end icon graphics\');
+fprintf(\'\',\'COMMENT: begin icon text\');
+fprintf(\'\',\'COMMENT: end icon text\');',
+    'sg_version' => '',
+    'sggui_pos' => '-1,-1,-1,-1',
+    'simulation_island_subsystem_handle' => 2078.00061035156,
+    'simulinkName' => 'parking_lot',
+    'simulink_accelerator_running' => 0,
+    'simulink_debugger_running' => 0,
+    'simulink_period' => 1,
+    'speed' => -1,
+    'synth_file' => 'XST Defaults*',
+    'synthesisTool' => 'XST',
+    'synthesis_language' => 'vhdl',
+    'synthesis_tool' => 'XST',
+    'synthesis_tool_sgadvanced' => '',
+    'sysclk_period' => 10,
+    'sysgen' => 'D:/Xilinx/14.7/ISE_DS/ISE/sysgen',
+    'sysgenRoot' => 'D:/Xilinx/14.7/ISE_DS/ISE/sysgen',
+    'sysgenTokenSettings' => {
+      'Impl_file' => 'ISE Defaults',
+      'Impl_file_sgadvanced' => '',
+      'Synth_file' => 'XST Defaults',
+      'Synth_file_sgadvanced' => '',
+      'base_system_period_hardware' => 10,
+      'base_system_period_simulink' => 1,
+      'block_icon_display' => 'Default',
+      'block_type' => 'sysgen',
+      'block_version' => '',
+      'ce_clr' => 0,
+      'clock_loc' => '',
+      'clock_wrapper' => 'Clock Enables',
+      'clock_wrapper_sgadvanced' => '',
+      'compilation' => 'HDL Netlist',
+      'compilation_lut' => {
+        'keys' => [
+          'HDL Netlist',
+        ],
+        'values' => [
+          'target1',
+        ],
+      },
+      'core_generation' => 1,
+      'core_generation_sgadvanced' => '',
+      'coregen_part_family' => 'zynq',
+      'create_interface_document' => 'off',
+      'dbl_ovrd' => -1,
+      'dbl_ovrd_sgadvanced' => '',
+      'dcm_input_clock_period' => 10,
+      'deprecated_control' => 'off',
+      'deprecated_control_sgadvanced' => '',
+      'directory' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/sysgen-netlist',
+      'eval_field' => 0,
+      'has_advanced_control' => 0,
+      'impl_file' => 'ISE Defaults*',
+      'incr_netlist' => 'off',
+      'incr_netlist_sgadvanced' => '',
+      'infoedit' => ' System Generator',
+      'master_sysgen_token_handle' => 2079.69555664063,
+      'package' => 'clg400',
+      'part' => 'xc7z010',
+      'preserve_hierarchy' => 0,
+      'proj_type' => 'Project Navigator',
+      'proj_type_sgadvanced' => '',
+      'run_coregen' => 'off',
+      'run_coregen_sgadvanced' => '',
+      'sg_blockgui_xml' => '',
+      'sg_icon_stat' => '50,50,-1,-1,token,white,0,07734,right,,[ ],[ ]',
+      'sg_list_contents' => '',
+      'sg_mask_display' => 'fprintf(\'\',\'COMMENT: begin icon graphics\');
+patch([0 50 50 0 0 ],[0 0 50 50 0 ],[1 1 1 ]);
+patch([1.6375 16.81 27.31 37.81 48.31 27.31 12.1375 1.6375 ],[36.655 36.655 47.155 36.655 47.155 47.155 47.155 36.655 ],[0.933333 0.203922 0.141176 ]);
+patch([12.1375 27.31 16.81 1.6375 12.1375 ],[26.155 26.155 36.655 36.655 26.155 ],[0.698039 0.0313725 0.219608 ]);
+patch([1.6375 16.81 27.31 12.1375 1.6375 ],[15.655 15.655 26.155 26.155 15.655 ],[0.933333 0.203922 0.141176 ]);
+patch([12.1375 48.31 37.81 27.31 16.81 1.6375 12.1375 ],[5.155 5.155 15.655 5.155 15.655 15.655 5.155 ],[0.698039 0.0313725 0.219608 ]);
+fprintf(\'\',\'COMMENT: end icon graphics\');
+fprintf(\'\',\'COMMENT: begin icon text\');
+fprintf(\'\',\'COMMENT: end icon text\');',
+      'sggui_pos' => '-1,-1,-1,-1',
+      'simulation_island_subsystem_handle' => 2078.00061035156,
+      'simulink_period' => 1,
+      'speed' => -1,
+      'synth_file' => 'XST Defaults*',
+      'synthesis_language' => 'vhdl',
+      'synthesis_tool' => 'XST',
+      'synthesis_tool_sgadvanced' => '',
+      'sysclk_period' => 10,
+      'testbench' => 0,
+      'testbench_sgadvanced' => '',
+      'trim_vbits' => 1,
+      'trim_vbits_sgadvanced' => '',
+      'xilinx_device' => 'xc7z010-1clg400',
+      'xilinxfamily' => 'zynq',
+    },
+    'sysgen_Root' => 'D:/Xilinx/14.7/ISE_DS/ISE/sysgen',
+    'systemClockPeriod' => 10,
+    'tempdir' => 'C:/Users/gurur/AppData/Local/Temp',
+    'testbench' => 0,
+    'testbench_sgadvanced' => '',
+    'tmpDir' => 'E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/sysgen-netlist/sysgen',
+    'trim_vbits' => 1,
+    'trim_vbits_sgadvanced' => '',
+    'ucfFile' => 'sift_cw.ucf',
+    'use_strict_names' => 1,
+    'user_tips_enabled' => 0,
+    'usertemp' => 'C:/Users/gurur/AppData/Local/Temp/sysgentmp-Gururaja',
+    'using71Netlister' => 1,
+    'verilog_files' => [
+      'conv_pkg.v',
+      'synth_reg.v',
+      'synth_reg_w_init.v',
+      'convert_type.v',
+    ],
+    'version' => '',
+    'vhdl_files' => [
+      'conv_pkg.vhd',
+      'synth_reg.vhd',
+      'synth_reg_w_init.vhd',
+    ],
+    'vsimtime' => '385.000000 ns',
+    'xcfFile' => 'sift_cw.xcf',
+    'xdcFile' => 'sift_cw.xdc',
+    'xilinx' => 'D:/Xilinx/14.7/ISE_DS/ISE',
+    'xilinx_device' => 'xc7z010-1clg400',
+    'xilinx_family' => 'zynq',
+    'xilinx_package' => 'clg400',
+    'xilinx_part' => 'xc7z010',
+    'xilinxdevice' => 'xc7z010-1clg400',
+    'xilinxfamily' => 'zynq',
+    'xilinxpart' => 'xc7z010',
+  },
+  'entityName' => '',
+  'nets' => {
+    '.clk' => {
+      'hdlType' => 'std_logic',
+      'width' => 1,
+    },
+    '.gateway_in' => {
+      'hdlType' => 'std_logic_vector(7 downto 0)',
+      'width' => 8,
+    },
+    'sysgen_dut.gateway_out' => {
+      'hdlType' => 'std_logic_vector(7 downto 0)',
+      'width' => 8,
+    },
+  },
+  'subblocks' => {
+    'gateway_in' => {
+      'connections' => {
+        'gateway_in' => '.gateway_in',
+      },
+      'entity' => {
+        'attributes' => {
+          'entityAlreadyNetlisted' => 1,
+          'isGateway' => 1,
+          'is_floating_block' => 1,
+        },
+        'entityName' => 'gateway_in',
+        'ports' => {
+          'gateway_in' => {
+            'attributes' => {
+              'bin_pt' => 0,
+              'inputFile' => 'sift_gateway_in.dat',
+              'is_floating_block' => 1,
+              'is_gateway_port' => 1,
+              'must_be_hdl_vector' => 1,
+              'period' => 1,
+              'port_id' => 0,
+              'simulinkName' => 'SIFT/Gateway In/Gateway In',
+              'source_block' => 'SIFT/Gateway In',
+              'timingConstraint' => 'none',
+              'type' => 'UFix_8_0',
+            },
+            'direction' => 'out',
+            'hdlType' => 'std_logic_vector(7 downto 0)',
+            'width' => 8,
+          },
+        },
+      },
+      'entityName' => 'gateway_in',
+    },
+    'gateway_out' => {
+      'connections' => {
+        'gateway_out' => 'sysgen_dut.gateway_out',
+      },
+      'entity' => {
+        'attributes' => {
+          'entityAlreadyNetlisted' => 1,
+          'isGateway' => 1,
+          'is_floating_block' => 1,
+        },
+        'entityName' => 'gateway_out',
+        'ports' => {
+          'gateway_out' => {
+            'attributes' => {
+              'bin_pt' => 0,
+              'inputFile' => 'sift_gateway_out.dat',
+              'is_floating_block' => 1,
+              'is_gateway_port' => 1,
+              'must_be_hdl_vector' => 1,
+              'period' => 1,
+              'port_id' => 0,
+              'simulinkName' => 'SIFT/Gateway Out/Gateway Out',
+              'source_block' => 'SIFT/Gateway Out',
+              'timingConstraint' => 'fast',
+              'type' => 'UFix_8_0',
+            },
+            'direction' => 'in',
+            'hdlType' => 'std_logic_vector(7 downto 0)',
+            'width' => 8,
+          },
+        },
+      },
+      'entityName' => 'gateway_out',
+    },
+    'sysgen_dut' => {
+      'connections' => {
+        'clk' => '.clk',
+        'gateway_in' => '.gateway_in',
+        'gateway_out' => 'sysgen_dut.gateway_out',
+      },
+      'entity' => {
+        'attributes' => {
+          'entityAlreadyNetlisted' => 1,
+          'hdlArchAttributes' => [
+          ],
+          'hdlEntityAttributes' => [
+          ],
+          'isClkWrapper' => 1,
+        },
+        'connections' => {
+          'clk' => 'clkNet',
+          'gateway_in' => 'gateway_in_net',
+          'gateway_out' => 'gateway_out_net',
+        },
+        'entityName' => 'sift_cw',
+        'nets' => {
+          'ce_1_sg_x217' => {
+            'attributes' => {
+              'hdlNetAttributes' => [
+                [
+                  'MAX_FANOUT',
+                  'string',
+                  '"REDUCE"',
+                ],
+              ],
+            },
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+          'clkNet' => {
+            'attributes' => {
+              'hdlNetAttributes' => [
+              ],
+            },
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+          'clk_1_sg_x217' => {
+            'attributes' => {
+              'hdlNetAttributes' => [
+              ],
+            },
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+          'gateway_in_net' => {
+            'attributes' => {
+              'hdlNetAttributes' => [
+              ],
+            },
+            'hdlType' => 'std_logic_vector(7 downto 0)',
+            'width' => 8,
+          },
+          'gateway_out_net' => {
+            'attributes' => {
+              'hdlNetAttributes' => [
+              ],
+            },
+            'hdlType' => 'std_logic_vector(7 downto 0)',
+            'width' => 8,
+          },
+          'persistentdff_inst_q' => {
+            'attributes' => {
+              'hdlNetAttributes' => [
+                [
+                  'syn_keep',
+                  'boolean',
+                  'true',
+                ],
+                [
+                  'keep',
+                  'boolean',
+                  'true',
+                ],
+                [
+                  'preserve_signal',
+                  'boolean',
+                  'true',
+                ],
+              ],
+            },
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+        },
+        'ports' => {
+          'ce' => {
+            'attributes' => {
+              'defaultHdlValue' => '\'1\'',
+              'domain' => 'default',
+              'group' => 0,
+              'isCe' => 1,
+              'period' => 1,
+            },
+            'direction' => 'in',
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+          'clk' => {
+            'attributes' => {
+              'domain' => 'default',
+              'group' => 0,
+              'isClk' => 1,
+              'period' => 1,
+              'type' => 'logic',
+            },
+            'direction' => 'in',
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+          'gateway_in' => {
+            'attributes' => {
+              'bin_pt' => 0,
+              'inputFile' => 'sift_gateway_in.dat',
+              'is_floating_block' => 1,
+              'is_gateway_port' => 1,
+              'must_be_hdl_vector' => 1,
+              'period' => 1,
+              'port_id' => 0,
+              'simulinkName' => 'SIFT/Gateway In/Gateway In',
+              'source_block' => 'SIFT/Gateway In',
+              'timingConstraint' => 'none',
+              'type' => 'UFix_8_0',
+            },
+            'direction' => 'in',
+            'hdlType' => 'std_logic_vector(7 downto 0)',
+            'width' => 8,
+          },
+          'gateway_out' => {
+            'attributes' => {
+              'bin_pt' => 0,
+              'inputFile' => 'sift_gateway_out.dat',
+              'is_floating_block' => 1,
+              'is_gateway_port' => 1,
+              'must_be_hdl_vector' => 1,
+              'period' => 1,
+              'port_id' => 0,
+              'simulinkName' => 'SIFT/Gateway Out/Gateway Out',
+              'source_block' => 'SIFT/Gateway Out',
+              'timingConstraint' => 'fast',
+              'type' => 'UFix_8_0',
+            },
+            'direction' => 'out',
+            'hdlType' => 'std_logic_vector(7 downto 0)',
+            'width' => 8,
+          },
+        },
+        'subblocks' => {
+          'default_clock_driver_sift_x0' => {
+            'connections' => {
+              'ce_1' => 'ce_1_sg_x217',
+              'clk_1' => 'clk_1_sg_x217',
+              'sysce' => [
+                'constant',
+                '\'1\'',
+              ],
+              'sysce_clr' => [
+                'constant',
+                '\'0\'',
+              ],
+              'sysclk' => 'clkNet',
+            },
+            'entity' => {
+              'attributes' => {
+                'domain' => 'default',
+                'hdlArchAttributes' => [
+                  [
+                    'syn_noprune',
+                    'boolean',
+                    'true',
+                  ],
+                  [
+                    'optimize_primitives',
+                    'boolean',
+                    'false',
+                  ],
+                  [
+                    'dont_touch',
+                    'boolean',
+                    'true',
+                  ],
+                ],
+                'hdlEntityAttributes' => [
+                ],
+                'isClkDriver' => 1,
+              },
+              'entityName' => 'default_clock_driver_SIFT',
+              'ports' => {
+                'ce_1' => {
+                  'attributes' => {
+                    'domain' => 'default',
+                    'group' => 1,
+                    'isCe' => 1,
+                    'period' => 1,
+                    'type' => 'logic',
+                  },
+                  'direction' => 'out',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'clk_1' => {
+                  'attributes' => {
+                    'domain' => 'default',
+                    'group' => 1,
+                    'isClk' => 1,
+                    'period' => 1,
+                    'type' => 'logic',
+                  },
+                  'direction' => 'out',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'sysce' => {
+                  'attributes' => {
+                    'group' => 0,
+                    'isCe' => 1,
+                    'period' => 1,
+                  },
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'sysce_clr' => {
+                  'attributes' => {
+                    'group' => 0,
+                    'isClr' => 1,
+                    'period' => 1,
+                  },
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'sysclk' => {
+                  'attributes' => {
+                    'group' => 0,
+                    'isClk' => 1,
+                    'period' => 1,
+                  },
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+              },
+            },
+            'entityName' => 'default_clock_driver_SIFT',
+          },
+          'persistentdff_inst' => {
+            'connections' => {
+              'clk' => 'clkNet',
+              'd' => 'persistentdff_inst_q',
+              'q' => 'persistentdff_inst_q',
+            },
+            'entity' => {
+              'attributes' => {
+                'entityAlreadyNetlisted' => 1,
+                'hdlCompAttributes' => [
+                  [
+                    'syn_black_box',
+                    'boolean',
+                    'true',
+                  ],
+                  [
+                    'box_type',
+                    'string',
+                    '"black_box"',
+                  ],
+                ],
+                'is_persistent_dff' => 1,
+                'needsComponentDeclaration' => 1,
+              },
+              'entityName' => 'xlpersistentdff',
+              'ports' => {
+                'clk' => {
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'd' => {
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'q' => {
+                  'direction' => 'out',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+              },
+            },
+            'entityName' => 'xlpersistentdff',
+          },
+          'sift_x0' => {
+            'connections' => {
+              'ce_1' => 'ce_1_sg_x217',
+              'clk_1' => 'clk_1_sg_x217',
+              'gateway_in' => 'gateway_in_net',
+              'gateway_out' => 'gateway_out_net',
+            },
+            'entity' => {
+              'attributes' => {
+                'entityAlreadyNetlisted' => 1,
+                'hdlKind' => 'vhdl',
+                'isDesign' => 1,
+                'simulinkName' => 'SIFT',
+              },
+              'entityName' => 'sift',
+              'ports' => {
+                'ce_1' => {
+                  'attributes' => {
+                    'domain' => '',
+                    'group' => 1,
+                    'isCe' => 1,
+                    'is_subsys_port' => 1,
+                    'period' => 1,
+                    'subsys_port_index' => 0,
+                    'type' => 'logic',
+                  },
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'clk_1' => {
+                  'attributes' => {
+                    'domain' => '',
+                    'group' => 1,
+                    'isClk' => 1,
+                    'is_subsys_port' => 1,
+                    'period' => 1,
+                    'subsys_port_index' => 0,
+                    'type' => 'logic',
+                  },
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic',
+                  'width' => 1,
+                },
+                'gateway_in' => {
+                  'attributes' => {
+                    'bin_pt' => 0,
+                    'inputFile' => 'sift_gateway_in.dat',
+                    'is_floating_block' => 1,
+                    'is_gateway_port' => 1,
+                    'must_be_hdl_vector' => 1,
+                    'period' => 1,
+                    'port_id' => 0,
+                    'simulinkName' => 'SIFT/Gateway In',
+                    'source_block' => 'SIFT',
+                    'timingConstraint' => 'none',
+                    'type' => 'UFix_8_0',
+                  },
+                  'direction' => 'in',
+                  'hdlType' => 'std_logic_vector(7 downto 0)',
+                  'width' => 8,
+                },
+                'gateway_out' => {
+                  'attributes' => {
+                    'bin_pt' => 0,
+                    'inputFile' => 'sift_gateway_out.dat',
+                    'is_floating_block' => 1,
+                    'is_gateway_port' => 1,
+                    'must_be_hdl_vector' => 1,
+                    'period' => 1,
+                    'port_id' => 0,
+                    'simulinkName' => 'SIFT/Gateway Out',
+                    'source_block' => 'SIFT',
+                    'timingConstraint' => 'none',
+                    'type' => 'UFix_8_0',
+                  },
+                  'direction' => 'out',
+                  'hdlType' => 'std_logic_vector(7 downto 0)',
+                  'width' => 8,
+                },
+              },
+            },
+            'entityName' => 'sift',
+          },
+        },
+      },
+      'entityName' => 'sift_cw',
+    },
+    'sysgen_gw_clk' => {
+      'connections' => {
+        'clk' => '.clk',
+      },
+      'entity' => {
+        'attributes' => {
+          'entityAlreadyNetlisted' => 1,
+          'isClk' => 1,
+          'isGateway' => 1,
+          'is_floating_block' => 1,
+        },
+        'entityName' => 'sysgen_gw_clk',
+        'ports' => {
+          'clk' => {
+            'attributes' => {
+              'isClk' => 1,
+            },
+            'direction' => 'out',
+            'hdlType' => 'std_logic',
+            'width' => 1,
+          },
+        },
+      },
+      'entityName' => 'sysgen_gw_clk',
+    },
+  },
+}

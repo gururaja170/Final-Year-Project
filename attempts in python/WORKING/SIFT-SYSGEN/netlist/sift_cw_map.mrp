@@ -1,0 +1,3545 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'sift_cw'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vsx50t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication on -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o sift_cw_map.ncd sift_cw.ngd sift_cw.pcf 
+Target Device  : xc5vsx50t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Mon Jul 05 09:15:05 2021
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,419 out of  32,640    7%
+    Number used as Flip Flops:               2,419
+  Number of Slice LUTs:                      4,119 out of  32,640   12%
+    Number used as logic:                    3,951 out of  32,640   12%
+      Number using O6 output only:           2,526
+      Number using O5 output only:           1,140
+      Number using O5 and O6:                  285
+    Number used as exclusive route-thru:       168
+  Number of route-thrus:                     1,369
+    Number using O6 output only:             1,304
+    Number using O5 output only:                61
+    Number using O5 and O6:                      4
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,381 out of   8,160   16%
+  Number of LUT Flip Flop pairs used:        4,419
+    Number with an unused Flip Flop:         2,000 out of   4,419   45%
+    Number with an unused LUT:                 300 out of   4,419    6%
+    Number of fully used LUT-FF pairs:       2,119 out of   4,419   47%
+    Number of unique control sets:             139
+    Number of slice register sites lost
+      to control set restrictions:             277 out of  32,640    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        17 out of     480    3%
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                      88 out of     132   66%
+    Number using BlockRAM only:                 88
+    Total primitives used:
+      Number of 18k BlockRAM used:             154
+    Total Memory used (KB):                  2,772 out of   4,752   58%
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+
+Average Fanout of Non-Clock Nets:                2.47
+
+Peak Memory Usage:  4866 MB
+Total REAL time to MAP completion:  1 mins 52 secs 
+Total CPU time to MAP completion:   1 mins 49 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ce has no load.
+INFO:LIT:395 - The above info message is repeated 128 more times for the
+   following (max. 5 shown):
+   sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_
+   ram/comp1.core_instance1/doutb(7),
+   sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_
+   ram/comp1.core_instance1/doutb(6),
+   sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_
+   ram/comp1.core_instance1/doutb(5),
+   sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_
+   ram/comp1.core_instance1/doutb(4),
+   sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_
+   ram/comp1.core_instance1/doutb(3)
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) removed
+ 890 block(s) optimized away
+ 129 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block
+"default_clock_driver_sift_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].r
+eg_comp/fd_prim_array[0].bit_is_0.fdre_comp" (SFF) removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ram
+/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_ra
+m/comp1.core_instance1/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram/
+comp0.core_instance0/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(0)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(7)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(6)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(5)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(4)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(3)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(2)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(1)" is sourceless and has been removed.
+The signal
+"sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/doutb(0)" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "persistentdff_inst_q" is unused and has been removed.
+ Unused block "persistentdff_inst/q" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+VCC 		sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000002
+LUT2 		sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000030
+   optimized to 1
+VCC 		sift_x0/addsub1/comp8.core_instance8/blk00000001/blk00000002
+LUT2 		sift_x0/addsub1/comp8.core_instance8/blk00000001/blk00000030
+   optimized to 1
+VCC 		sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000002
+LUT2 		sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000030
+   optimized to 1
+VCC 		sift_x0/addsub3/comp8.core_instance8/blk00000001/blk00000002
+LUT2 		sift_x0/addsub3/comp8.core_instance8/blk00000001/blk00000030
+   optimized to 1
+VCC 		sift_x0/addsub4/comp8.core_instance8/blk00000001/blk00000002
+LUT2 		sift_x0/addsub4/comp8.core_instance8/blk00000001/blk00000030
+   optimized to 1
+GND
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002e
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000003c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/bl
+k0000003d
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000039
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/b
+lk0000002c
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/b
+lk0000002e
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000018
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/cmult/comp0.core_inst
+ance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/cmult1/comp1.core_ins
+tance1/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/cmult2/comp2.core_ins
+tance2/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/cmult3/comp3.core_ins
+tance3/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/cmult4/comp4.core_ins
+tance4/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/cmult5/comp5.core_ins
+tance5/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer1_6c9c96ca56/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer2_4cda2725d8/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex2_line_buffer_4f81118249/single_port
+_ram/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/counter1/com
+p0.core_instance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ra
+m/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000002e
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000003c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/bl
+k0000003d
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub1/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk00000039
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub2/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/b
+lk0000002c
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/b
+lk0000002e
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000018
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/cmult/comp0.core_inst
+ance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/cmult1/comp1.core_ins
+tance1/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/cmult2/comp2.core_ins
+tance2/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/cmult3/comp3.core_ins
+tance3/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/cmult4/comp4.core_ins
+tance4/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/cmult5/comp5.core_ins
+tance5/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer1_6c9c96ca56/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer2_4cda2725d8/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex2_line_buffer_4f81118249/single_port
+_ram/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/counter1/com
+p0.core_instance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter2_360262754e/virtex_line_buffer_a29e816750/dual_port_ra
+m/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000002e
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000003c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub/comp3.core_instance3/blk00000001/bl
+k0000003d
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub1/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk00000039
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub2/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/addsub3/comp6.core_instance6/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub3/comp6.core_instance6/blk00000001/b
+lk0000002c
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/addsub4/comp7.core_instance7/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/addsub4/comp7.core_instance7/blk00000001/b
+lk0000002e
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000018
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/cmult/comp0.core_inst
+ance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/cmult1/comp1.core_ins
+tance1/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/cmult2/comp2.core_ins
+tance2/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/cmult3/comp3.core_ins
+tance3/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/cmult4/comp4.core_ins
+tance4/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/cmult5/comp5.core_ins
+tance5/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer1_6c9c96ca56/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer2_4cda2725d8/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex2_line_buffer_4f81118249/single_port
+_ram/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/counter1/com
+p0.core_instance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter3_ebf74f7686/virtex_line_buffer_a29e816750/dual_port_ra
+m/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000002e
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000003c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub/comp3.core_instance3/blk00000001/bl
+k0000003d
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub1/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk00000039
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub2/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/addsub3/comp6.core_instance6/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub3/comp6.core_instance6/blk00000001/b
+lk0000002c
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/addsub4/comp7.core_instance7/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/addsub4/comp7.core_instance7/blk00000001/b
+lk0000002e
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000018
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/cmult/comp0.core_inst
+ance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/cmult1/comp1.core_ins
+tance1/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/cmult2/comp2.core_ins
+tance2/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/cmult3/comp3.core_ins
+tance3/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/cmult4/comp4.core_ins
+tance4/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/cmult5/comp5.core_ins
+tance5/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer1_6c9c96ca56/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer2_4cda2725d8/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex2_line_buffer_4f81118249/single_port
+_ram/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/counter1/com
+p0.core_instance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter4_2106171b83/virtex_line_buffer_a29e816750/dual_port_ra
+m/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000002e
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000003c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub/comp3.core_instance3/blk00000001/bl
+k0000003d
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub1/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk00000039
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub2/comp4.core_instance4/blk00000001/b
+lk0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/addsub3/comp6.core_instance6/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub3/comp6.core_instance6/blk00000001/b
+lk0000002c
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/addsub4/comp7.core_instance7/blk00000001/b
+lk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/addsub4/comp7.core_instance7/blk00000001/b
+lk0000002e
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add1/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add10/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add11/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add12/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add13/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add14/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add15/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add16/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add17/comp0.core_inst
+ance0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add18/comp1.core_inst
+ance1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add2/comp2.core_insta
+nce2/blk00000001/blk00000018
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add3/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add4/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add5/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add6/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add7/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add8/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/add9/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/cmult/comp0.core_inst
+ance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/cmult1/comp1.core_ins
+tance1/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/cmult2/comp2.core_ins
+tance2/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/cmult3/comp3.core_ins
+tance3/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/cmult4/comp4.core_ins
+tance4/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/cmult5/comp5.core_ins
+tance5/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+2
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk0000000
+3
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row11_7d49ab9ec0/virt
+ex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row6_007da3360f/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row7_1c9d142e39/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row8_8879eae491/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/subsystem_831c6341cb/row9_4c6a599104/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer1_6c9c96ca56/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer1_6c9c96ca56/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer2_4cda2725d8/counter2/c
+omp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer2_4cda2725d8/single_por
+t_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer_4f81118249/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex2_line_buffer_4f81118249/single_port
+_ram/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/counter1/com
+p0.core_instance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter5_7c41ae8701/virtex_line_buffer_a29e816750/dual_port_ra
+m/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000002e
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000003c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub/comp3.core_instance3/blk00000001/blk
+0000003d
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k0000002d
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub1/comp4.core_instance4/blk00000001/bl
+k0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k00000028
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k00000029
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k0000002a
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k0000002b
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k0000002c
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k00000039
+   optimized to 0
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub2/comp4.core_instance4/blk00000001/bl
+k0000003a
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/addsub3/comp6.core_instance6/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub3/comp6.core_instance6/blk00000001/bl
+k0000002c
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/addsub4/comp7.core_instance7/blk00000001/bl
+k00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/addsub4/comp7.core_instance7/blk00000001/bl
+k0000002e
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add/comp0.core_instanc
+e0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add/comp0.core_instanc
+e0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add1/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add1/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add10/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add10/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add11/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add11/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add12/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add12/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add13/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add13/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add14/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add14/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add15/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add15/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add16/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add16/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add17/comp0.core_insta
+nce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add17/comp0.core_insta
+nce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add18/comp1.core_insta
+nce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add18/comp1.core_insta
+nce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add2/comp2.core_instan
+ce2/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add2/comp2.core_instan
+ce2/blk00000001/blk00000018
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add3/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add3/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add4/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add4/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add5/comp1.core_instan
+ce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add5/comp1.core_instan
+ce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add6/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add6/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add7/comp1.core_instan
+ce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add7/comp1.core_instan
+ce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add8/comp1.core_instan
+ce1/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add8/comp1.core_instan
+ce1/blk00000001/blk00000016
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add9/comp0.core_instan
+ce0/blk00000001/blk00000002
+LUT2
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/add9/comp0.core_instan
+ce0/blk00000001/blk00000014
+   optimized to 0
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/cmult/comp0.core_insta
+nce0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/cmult1/comp1.core_inst
+ance1/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/cmult2/comp2.core_inst
+ance2/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/cmult3/comp3.core_inst
+ance3/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/cmult4/comp4.core_inst
+ance4/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/cmult5/comp5.core_inst
+ance5/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row11_7d49ab9ec0/virte
+x2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row6_007da3360f/virtex
+2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row7_1c9d142e39/virtex
+2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex
+2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer1_2684fcf86b/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer1_2684fcf86b/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer2_a40a7821c7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer3_60743c0a43/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer_c1bb50b4d7/counter2/comp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row9_4c6a599104/virtex
+2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer1_6c9c96ca56/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer1_6c9c96ca56/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer1_6c9c96ca56/single_port
+_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer2_4cda2725d8/counter2/co
+mp0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer2_4cda2725d8/counter2/co
+mp0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer2_4cda2725d8/single_port
+_ram/comp0.core_instance0/XST_GND
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/counter2/com
+p0.core_instance0/blk00000001/blk00000002
+VCC
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/counter2/com
+p0.core_instance0/blk00000001/blk00000003
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/single_port_
+ram/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/counter1/comp
+0.core_instance0/blk00000001/blk00000002
+GND
+		sift_x0/gaussian_filter_75f41107d3/virtex_line_buffer_a29e816750/dual_port_ram
+/comp0.core_instance0/XST_GND
+VCC
+		sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/counter1/c
+omp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator1_77d7170cd1/virtex_line_buffer1_716e9e469b/dual_port_
+ram/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/counter1/co
+mp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator1_77d7170cd1/virtex_line_buffer_16e10a05b3/dual_port_r
+am/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/counter1/c
+omp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator2_5df1ec7872/virtex_line_buffer1_716e9e469b/dual_port_
+ram/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/counter1/co
+mp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator2_5df1ec7872/virtex_line_buffer_16e10a05b3/dual_port_r
+am/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/counter1/c
+omp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer1_716e9e469b/dual_port_
+ram/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/counter1/co
+mp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_r
+am/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/counter1/c
+omp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_
+ram/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/counter1/co
+mp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator4_1238959b71/virtex_line_buffer_16e10a05b3/dual_port_r
+am/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/counter1/co
+mp1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator_68334b248c/virtex_line_buffer1_716e9e469b/dual_port_r
+am/comp1.core_instance1/XST_GND
+VCC
+		sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/counter1/com
+p1.core_instance1/blk00000001/blk00000002
+GND
+		sift_x0/window_generator_68334b248c/virtex_line_buffer_16e10a05b3/dual_port_ra
+m/comp1.core_instance1/XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(0)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(1)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(2)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(3)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(4)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(5)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(6)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_in(7)                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| gateway_out(0)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(1)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(2)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(3)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(4)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(5)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(6)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| gateway_out(7)                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

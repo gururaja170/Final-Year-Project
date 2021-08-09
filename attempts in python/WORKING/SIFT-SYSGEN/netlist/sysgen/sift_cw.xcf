@@ -1,0 +1,30 @@
+
+
+# Global period constraint
+NET "clk" TNM_NET = "clk_55e9a606";
+TIMESPEC "TS_clk_55e9a606" = PERIOD "clk_55e9a606" 10.0 ns HIGH 50 %;
+
+# Offset in constraints
+
+# Offset out constraints
+NET "gateway_out(0)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(0)" FAST;
+NET "gateway_out(1)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(1)" FAST;
+NET "gateway_out(2)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(2)" FAST;
+NET "gateway_out(3)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(3)" FAST;
+NET "gateway_out(4)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(4)" FAST;
+NET "gateway_out(5)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(5)" FAST;
+NET "gateway_out(6)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(6)" FAST;
+NET "gateway_out(7)" OFFSET = OUT : 10.0 : AFTER "clk";
+NET "gateway_out(7)" FAST;
+
+# Offset inout constraints
+
+# LOC constraints
+NET "clk" LOC = "Fixed";

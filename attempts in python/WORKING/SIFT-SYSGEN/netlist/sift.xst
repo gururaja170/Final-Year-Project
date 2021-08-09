@@ -1,0 +1,5 @@
+set -tmpdir "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/xst/projnav.tmp"
+set -xsthdpdir "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/xst"
+elaborate
+-ifn sift.prj
+-ifmt mixed

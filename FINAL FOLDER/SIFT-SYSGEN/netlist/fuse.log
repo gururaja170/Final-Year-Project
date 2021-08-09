@@ -1,0 +1,187 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift_cw_isim_beh.exe" -prj "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift_cw_beh.prj" "work.sift_cw" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift.vhd" into library work
+Parsing VHDL file "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift_cw.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift_cw.vhd" Line 454: <xlpersistentdff> remains a black-box since it has no binding entity.
+Completed static elaboration
+WARNING:Simulator:648 - "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift_cw.vhd" Line 454. Instance xlpersistentdff is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package conv_pkg
+Compiling package vcomponents
+Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
+Compiling architecture structural of entity single_reg_w_init [\single_reg_w_init(1,0,"0000")(0...]
+Compiling architecture structural of entity synth_reg_w_init [\synth_reg_w_init(1,0,"0000",1)(...]
+Compiling architecture behavior of entity xlclockdriver [\xlclockdriver(1,1,5,0)\]
+Compiling architecture structural of entity default_clock_driver_SIFT [default_clock_driver_sift_defaul...]
+Compiling package std_logic_arith
+Compiling package xbip_addsub_v2_0_comp
+Compiling package textio
+Compiling package bip_utils_pkg_v2_0
+Compiling package bip_usecase_utils_pkg_v2_0
+Compiling package c_addsub_pkg_v11_0
+Compiling package xbip_pipe_v2_0_xst_comp
+Compiling package c_reg_fd_v11_0_comp
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(23,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(23,23,23,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,23...]
+Compiling architecture addsb_11_0_ea646992679bcc81_a of entity addsb_11_0_ea646992679bcc81 [addsb_11_0_ea646992679bcc81_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_ea646...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(20,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(20,20,20,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,20...]
+Compiling architecture addsb_11_0_30d1457599ad93f1_a of entity addsb_11_0_30d1457599ad93f1 [addsb_11_0_30d1457599ad93f1_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_30d14...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(19,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(19,19,19,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,19...]
+Compiling architecture addsb_11_0_e25ad78e4233698a_a of entity addsb_11_0_e25ad78e4233698a [addsb_11_0_e25ad78e4233698a_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_e25ad...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_e25ad...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(21,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(21,21,21,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,21...]
+Compiling architecture addsb_11_0_c8834dcbd5945abc_a of entity addsb_11_0_c8834dcbd5945abc [addsb_11_0_c8834dcbd5945abc_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_c8834...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(22,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(22,22,22,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,22...]
+Compiling architecture addsb_11_0_425ea38a5c924775_a of entity addsb_11_0_425ea38a5c924775 [addsb_11_0_425ea38a5c924775_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_425ea...]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture structural of entity srl17e [\srl17e(19,1)\]
+Compiling architecture structural of entity synth_reg [\synth_reg(19,1)\]
+Compiling architecture behavior of entity xldelay [\xldelay(19,1,0,0)\]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(9,"0","0",1,0,0,...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(9,9,9,0,8...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,9,...]
+Compiling architecture addsb_11_0_d6c5b08d70f432d4_a of entity addsb_11_0_d6c5b08d70f432d4 [addsb_11_0_d6c5b08d70f432d4_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_d6c5b...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(10,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(10,10,10,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,10...]
+Compiling architecture addsb_11_0_7094c587598cfa37_a of entity addsb_11_0_7094c587598cfa37 [addsb_11_0_7094c587598cfa37_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_7094c...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(11,"0","0",1,0,0...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(11,11,11,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"virtex5",0,11...]
+Compiling architecture addsb_11_0_7ae34980b4a72e6c_a of entity addsb_11_0_7ae34980b4a72e6c [addsb_11_0_7ae34980b4a72e6c_defa...]
+Compiling architecture behavior of entity xladdsub_SIFT [\xladdsub_SIFT("addsb_11_0_7ae34...]
+Compiling package std_logic_signed
+Compiling package mult_gen_pkg_v11_2
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex5",10...]
+Compiling architecture cmlt_11_2_5496cf9983a43407_a of entity cmlt_11_2_5496cf9983a43407 [cmlt_11_2_5496cf9983a43407_defau...]
+Compiling architecture behavior of entity xlcmult_SIFT [\xlcmult_SIFT("cmlt_11_2_5496cf9...]
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex5",11...]
+Compiling architecture cmlt_11_2_515a5d7db7c97088_a of entity cmlt_11_2_515a5d7db7c97088 [cmlt_11_2_515a5d7db7c97088_defau...]
+Compiling architecture behavior of entity xlcmult_SIFT [\xlcmult_SIFT("cmlt_11_2_515a5d7...]
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex5",10...]
+Compiling architecture cmlt_11_2_4ff21534f5d532d3_a of entity cmlt_11_2_4ff21534f5d532d3 [cmlt_11_2_4ff21534f5d532d3_defau...]
+Compiling architecture behavior of entity xlcmult_SIFT [\xlcmult_SIFT("cmlt_11_2_4ff2153...]
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex5",10...]
+Compiling architecture cmlt_11_2_9872e8b7ce5da253_a of entity cmlt_11_2_9872e8b7ce5da253 [cmlt_11_2_9872e8b7ce5da253_defau...]
+Compiling architecture behavior of entity xlcmult_SIFT [\xlcmult_SIFT("cmlt_11_2_9872e8b...]
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex5",8,...]
+Compiling architecture cmlt_11_2_13bc97a43f38db15_a of entity cmlt_11_2_13bc97a43f38db15 [cmlt_11_2_13bc97a43f38db15_defau...]
+Compiling architecture behavior of entity xlcmult_SIFT [\xlcmult_SIFT("cmlt_11_2_13bc97a...]
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex5",10...]
+Compiling architecture cmlt_11_2_3040979a47684d1c_a of entity cmlt_11_2_3040979a47684d1c [cmlt_11_2_3040979a47684d1c_defau...]
+Compiling architecture behavior of entity xlcmult_SIFT [\xlcmult_SIFT("cmlt_11_2_3040979...]
+Compiling architecture structural of entity srl17e [\srl17e(10,1)\]
+Compiling architecture structural of entity synth_reg [\synth_reg(10,1)\]
+Compiling architecture behavior of entity xldelay [\xldelay(10,1,0,0)\]
+Compiling architecture structural of entity srl17e [\srl17e(8,1)\]
+Compiling architecture structural of entity synth_reg [\synth_reg(8,1)\]
+Compiling architecture behavior of entity xldelay [\xldelay(8,1,0,0)\]
+Compiling architecture behavior of entity constant_6293007044 [constant_6293007044_default]
+Compiling package xbip_counter_v2_0_pkg
+Compiling package c_counter_binary_v11_0_pkg
+Compiling package xbip_counter_v2_0_xst_comp
+Compiling package c_compare_v11_0_comp
+Compiling package c_mux_bus_v11_0_comp
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(10,"0","0",1,0,1...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(10,"0","0",1,0,1...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(10,10,10,...]
+Compiling architecture behavioral of entity c_counter_binary_v11_0_legacy [\c_counter_binary_v11_0_legacy("...]
+Compiling architecture behavioral of entity c_counter_binary_v11_0 [\c_counter_binary_v11_0(0,0,"vir...]
+Compiling architecture cntr_11_0_467594213c284489_a of entity cntr_11_0_467594213c284489 [cntr_11_0_467594213c284489_defau...]
+Compiling architecture behavior of entity xlcounter_limit_SIFT [\xlcounter_limit_SIFT("cntr_11_0...]
+Compiling package std_logic_textio
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_2_output_stage [\BLK_MEM_GEN_V7_2_output_stage("...]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_2_output_stage [\BLK_MEM_GEN_V7_2_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_2_softecc_output_reg_stage [\BLK_MEM_GEN_V7_2_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_2_mem_module [\BLK_MEM_GEN_V7_2_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_2 [\BLK_MEM_GEN_V7_2("blk_mem_gen_v...]
+Compiling architecture bmg_72_6f9d105f6f5129b9_a of entity bmg_72_6f9d105f6f5129b9 [bmg_72_6f9d105f6f5129b9_default]
+Compiling architecture behavior of entity xlspram_SIFT [\xlspram_SIFT("bmg_72_6f9d105f6f...]
+Compiling architecture structural of entity virtex2_line_buffer_entity_c1bb50b4d7 [virtex2_line_buffer_entity_c1bb5...]
+Compiling architecture structural of entity row11_entity_7d49ab9ec0 [row11_entity_7d49ab9ec0_default]
+Compiling architecture structural of entity subsystem_entity_831c6341cb [subsystem_entity_831c6341cb_defa...]
+Compiling architecture behavior of entity constant_963ed6358a [constant_963ed6358a_default]
+Compiling architecture behavior of entity constant_109a05a45d [constant_109a05a45d_default]
+Compiling architecture behavior of entity constant_498bc68c14 [constant_498bc68c14_default]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(10,"0","1",1,0,1...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(10,10,10,...]
+Compiling architecture behavioral of entity c_mux_bus_v11_0 [\c_mux_bus_v11_0("virtex6","virt...]
+Compiling architecture behavioral of entity c_counter_binary_v11_0_legacy [\c_counter_binary_v11_0_legacy("...]
+Compiling architecture behavioral of entity c_counter_binary_v11_0 [\c_counter_binary_v11_0(0,0,"vir...]
+Compiling architecture cntr_11_0_f08a9e8f3d5b5bdb_a of entity cntr_11_0_f08a9e8f3d5b5bdb [cntr_11_0_f08a9e8f3d5b5bdb_defau...]
+Compiling architecture behavior of entity xlcounter_free_SIFT [\xlcounter_free_SIFT("cntr_11_0_...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_2_mem_module [\BLK_MEM_GEN_V7_2_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_2 [\BLK_MEM_GEN_V7_2("blk_mem_gen_v...]
+Compiling architecture bmg_72_410b3d3227446c03_a of entity bmg_72_410b3d3227446c03 [bmg_72_410b3d3227446c03_default]
+Compiling architecture behavior of entity xldpram_SIFT [\xldpram_SIFT("bmg_72_410b3d3227...]
+Compiling architecture structural of entity single_reg_w_init [\single_reg_w_init(10,2,"0000000...]
+Compiling architecture structural of entity synth_reg_w_init [\synth_reg_w_init(10,2,"00000000...]
+Compiling architecture behavior of entity xlregister [\xlregister(10,"0000000000")(0,9...]
+Compiling architecture behavior of entity relational_0ffd72e037 [relational_0ffd72e037_default]
+Compiling architecture structural of entity virtex_line_buffer_entity_a29e816750 [virtex_line_buffer_entity_a29e81...]
+Compiling architecture structural of entity gaussian_filter_entity_75f41107d3 [gaussian_filter_entity_75f41107d...]
+Compiling architecture behavior of entity logical_691cfbc034 [logical_691cfbc034_default]
+Compiling architecture behavior of entity logical_1045fb331f [logical_1045fb331f_default]
+Compiling architecture behavior of entity relational_cef71be05b [relational_cef71be05b_default]
+Compiling architecture structural of entity subsystem_entity_d161dbf7fc [subsystem_entity_d161dbf7fc_defa...]
+Compiling architecture structural of entity subsystem2_entity_9d437adc7b [subsystem2_entity_9d437adc7b_def...]
+Compiling architecture structural of entity maxima_entity_f36dca9fb9 [maxima_entity_f36dca9fb9_default]
+Compiling architecture behavior of entity relational_ba5c6f1dfc [relational_ba5c6f1dfc_default]
+Compiling architecture structural of entity subsystem1_entity_632ff6b114 [subsystem1_entity_632ff6b114_def...]
+Compiling architecture structural of entity subsystem2_entity_2a6c0a7987 [subsystem2_entity_2a6c0a7987_def...]
+Compiling architecture structural of entity subsystem_entity_1998dcc4bb [subsystem_entity_1998dcc4bb_defa...]
+Compiling architecture structural of entity minima_entity_704bc545e6 [minima_entity_704bc545e6_default]
+Compiling architecture behavior of entity constant_7fdf918d22 [constant_7fdf918d22_default]
+Compiling architecture behavior of entity constant_a3923dd146 [constant_a3923dd146_default]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(11,"0","1",1,0,1...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(11,"0","0",1,0,1...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(11,11,11,...]
+Compiling architecture behavioral of entity c_mux_bus_v11_0 [\c_mux_bus_v11_0("virtex6","virt...]
+Compiling architecture behavioral of entity c_counter_binary_v11_0_legacy [\c_counter_binary_v11_0_legacy("...]
+Compiling architecture behavioral of entity c_counter_binary_v11_0 [\c_counter_binary_v11_0(0,0,"vir...]
+Compiling architecture cntr_11_0_408dad9701d8fb61_a of entity cntr_11_0_408dad9701d8fb61 [cntr_11_0_408dad9701d8fb61_defau...]
+Compiling architecture behavior of entity xlcounter_free_SIFT [\xlcounter_free_SIFT("cntr_11_0_...]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_2_output_stage [\BLK_MEM_GEN_V7_2_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_2_softecc_output_reg_stage [\BLK_MEM_GEN_V7_2_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_2_mem_module [\BLK_MEM_GEN_V7_2_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_2 [\BLK_MEM_GEN_V7_2("blk_mem_gen_v...]
+Compiling architecture bmg_72_3e1ab284fecfe373_a of entity bmg_72_3e1ab284fecfe373 [bmg_72_3e1ab284fecfe373_default]
+Compiling architecture behavior of entity xldpram_SIFT [\xldpram_SIFT("bmg_72_3e1ab284fe...]
+Compiling architecture structural of entity single_reg_w_init [\single_reg_w_init(11,2,"0000000...]
+Compiling architecture structural of entity synth_reg_w_init [\synth_reg_w_init(11,2,"00000000...]
+Compiling architecture behavior of entity xlregister [\xlregister(11,"00000000000")(0,...]
+Compiling architecture behavior of entity relational_2147430058 [relational_2147430058_default]
+Compiling architecture structural of entity virtex_line_buffer_entity_16e10a05b3 [virtex_line_buffer_entity_16e10a...]
+Compiling architecture structural of entity window_generator_entity_68334b248c [window_generator_entity_68334b24...]
+Compiling architecture structural of entity sift [sift_default]
+Compiling architecture structural of entity sift_cw
+Time Resolution for simulation is 1ps.
+Waiting for 91 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\sift_cw_isim_beh.exe.sim\libPortability.dll".
+Compiled 315 VHDL Units
+Built simulation executable E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/netlist/sift_cw_isim_beh.exe
+Fuse Memory Usage: 90360 KB
+Fuse CPU Usage: 7624 ms

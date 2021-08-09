@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/sysgen-netlist/sift_cw.xst" -ofn "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/sysgen-netlist/sift_cw.syr" 

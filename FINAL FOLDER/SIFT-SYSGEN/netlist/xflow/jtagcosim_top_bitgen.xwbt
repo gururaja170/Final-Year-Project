@@ -1,0 +1,8 @@
+INTSTYLE=xflow
+INFILE=E:\PROJECTS\FINAL YEAR PROJECT\attempts in python\SIFT-SYSGEN\netlist\xflow\jtagcosim_top.ncd
+OUTFILE=E:\PROJECTS\FINAL YEAR PROJECT\attempts in python\SIFT-SYSGEN\netlist\xflow\jtagcosim_top.bit
+FAMILY=Virtex5
+PART=xc5vsx50t-1ff1136
+WORKINGDIR=E:\PROJECTS\FINAL YEAR PROJECT\attempts in python\SIFT-SYSGEN\netlist\xflow
+LICENSE=ISE
+USER_INFO=__0_0_0

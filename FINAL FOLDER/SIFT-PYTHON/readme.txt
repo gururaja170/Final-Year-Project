@@ -1,0 +1,1 @@
+In SIFT Detect Press Enter to stop the while loop 

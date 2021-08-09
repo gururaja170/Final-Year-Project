@@ -1,0 +1,1 @@
+run -ifn xst_sift.prj -ifmt mixed -ofn sift_cw.ngc -ofmt NGC -p xc5vsx50t-1ff1136 -ent sift_cw -keep_hierarchy NO -iobuf NO -bus_delimiter () -top sift_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc sift_cw.xcf -write_timing_constraints yes

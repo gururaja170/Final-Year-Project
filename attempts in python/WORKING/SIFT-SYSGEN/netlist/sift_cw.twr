@@ -1,0 +1,953 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1
+-n 3 -fastpaths -xml sift_cw.twx sift_cw.ncd -o sift_cw.twr sift_cw.pcf -ucf
+sift_cw.ucf
+
+Design file:              sift_cw.ncd
+Physical constraint file: sift_cw.pcf
+Device,package,speed:     xc5vsx50t,ff1136,-1 (PRODUCTION 1.73 2013-10-13, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk_55e9a606 = PERIOD TIMEGRP "clk_55e9a606" 10 ns HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 224788644500 paths analyzed, 12362 endpoints analyzed, 274 failing endpoints
+ 274 timing errors detected. (274 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  16.923ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0 (SLICE_X33Y80.A6), 3394395360 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.923ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.690ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.198ns (1.252 - 1.450)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y11.DOADOL0 Trcko_DORA            2.180   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X31Y54.A5      net (fanout=3)        0.628   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/single_port_ram_data_out_net_x11(0)
+    SLICE_X31Y54.CMUX    Topac                 0.684   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/sig00000020
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X29Y55.C5      net (fanout=1)        0.537   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4_s_net(2)
+    SLICE_X29Y55.COUT    Topcyc                0.423   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X29Y56.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X29Y56.BMUX    Tcinb                 0.335   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X27Y57.B4      net (fanout=2)        0.809   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8_s_net(5)
+    SLICE_X27Y57.CMUX    Topbc                 0.673   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X28Y58.A4      net (fanout=1)        0.687   sift_x0/gaussian_filter2_360262754e/cmult1_p_net_x0(8)
+    SLICE_X28Y58.DMUX    Topad                 0.734   sift_x0/delay1_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X31Y60.D5      net (fanout=2)        0.529   sift_x0/gaussian_filter2_360262754e/addsub_s_net(11)
+    SLICE_X31Y60.COUT    Topcyd                0.392   sift_x0/delay1_q_net_x9(7)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X31Y61.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X31Y61.BMUX    Tcinb                 0.335   sift_x0/delay3_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X32Y63.B6      net (fanout=2)        0.683   sift_x0/gaussian_filter2_360262754e/addsub3_s_net(13)
+    SLICE_X32Y63.CMUX    Topbc                 0.658   sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk00000036
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X34Y67.C4      net (fanout=3)        0.892   sift_x0/addsub4_s_net_x2(14)
+    SLICE_X34Y67.COUT    Topcyc                0.423   sift_x0/delay4_q_net_x14(7)
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X34Y68.BMUX    Tcinb                 0.335   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X33Y69.C1      net (fanout=1)        0.916   sift_x0/addsub2/core_s(17)
+    SLICE_X33Y69.C       Tilo                  0.094   sift_x0/delay1_q_net_x15(7)
+                                                       sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A6      net (fanout=1)        0.427   sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/result12_cmp_eq000099
+    SLICE_X33Y72.B6      net (fanout=17)       0.204   sift_x0/addsub2/result12_cmp_eq0000
+    SLICE_X33Y72.B       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/conv_s(2)1
+    SLICE_X30Y77.B4      net (fanout=27)       1.043   sift_x0/addsub2_s_net_x12(2)
+    SLICE_X30Y77.B       Tilo                  0.094   sift_x0/delay3_q_net_x8(7)
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel2
+    SLICE_X33Y77.AX      net (fanout=1)        0.793   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel1
+    SLICE_X33Y77.AMUX    Taxa                  0.313   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational4/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel1
+    SLICE_X33Y80.A6      net (fanout=1)        0.655   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel2
+    SLICE_X33Y80.CLK     Tas                   0.026   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel21
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.690ns (7.887ns logic, 8.803ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.921ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.688ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.198ns (1.252 - 1.450)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y11.DOADOL0 Trcko_DORA            2.180   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X31Y54.A5      net (fanout=3)        0.628   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/single_port_ram_data_out_net_x11(0)
+    SLICE_X31Y54.CMUX    Topac                 0.684   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/sig00000020
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X29Y55.C5      net (fanout=1)        0.537   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4_s_net(2)
+    SLICE_X29Y55.COUT    Topcyc                0.423   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X29Y56.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X29Y56.BMUX    Tcinb                 0.335   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X27Y57.B4      net (fanout=2)        0.809   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8_s_net(5)
+    SLICE_X27Y57.CMUX    Topbc                 0.673   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X28Y58.A4      net (fanout=1)        0.687   sift_x0/gaussian_filter2_360262754e/cmult1_p_net_x0(8)
+    SLICE_X28Y58.BMUX    Topab                 0.487   sift_x0/delay1_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X31Y60.B4      net (fanout=2)        0.665   sift_x0/gaussian_filter2_360262754e/addsub_s_net(9)
+    SLICE_X31Y60.COUT    Topcyb                0.501   sift_x0/delay1_q_net_x9(7)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000037
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X31Y61.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X31Y61.BMUX    Tcinb                 0.335   sift_x0/delay3_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X32Y63.B6      net (fanout=2)        0.683   sift_x0/gaussian_filter2_360262754e/addsub3_s_net(13)
+    SLICE_X32Y63.CMUX    Topbc                 0.658   sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk00000036
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X34Y67.C4      net (fanout=3)        0.892   sift_x0/addsub4_s_net_x2(14)
+    SLICE_X34Y67.COUT    Topcyc                0.423   sift_x0/delay4_q_net_x14(7)
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X34Y68.BMUX    Tcinb                 0.335   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X33Y69.C1      net (fanout=1)        0.916   sift_x0/addsub2/core_s(17)
+    SLICE_X33Y69.C       Tilo                  0.094   sift_x0/delay1_q_net_x15(7)
+                                                       sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A6      net (fanout=1)        0.427   sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/result12_cmp_eq000099
+    SLICE_X33Y72.B6      net (fanout=17)       0.204   sift_x0/addsub2/result12_cmp_eq0000
+    SLICE_X33Y72.B       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/conv_s(2)1
+    SLICE_X30Y77.B4      net (fanout=27)       1.043   sift_x0/addsub2_s_net_x12(2)
+    SLICE_X30Y77.B       Tilo                  0.094   sift_x0/delay3_q_net_x8(7)
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel2
+    SLICE_X33Y77.AX      net (fanout=1)        0.793   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel1
+    SLICE_X33Y77.AMUX    Taxa                  0.313   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational4/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel1
+    SLICE_X33Y80.A6      net (fanout=1)        0.655   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel2
+    SLICE_X33Y80.CLK     Tas                   0.026   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel21
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.688ns (7.749ns logic, 8.939ns route)
+                                                       (46.4% logic, 53.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.916ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.683ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.198ns (1.252 - 1.450)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y11.DOADOL0 Trcko_DORA            2.180   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X31Y54.A5      net (fanout=3)        0.628   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/single_port_ram_data_out_net_x11(0)
+    SLICE_X31Y54.CMUX    Topac                 0.684   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/sig00000020
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X29Y55.C5      net (fanout=1)        0.537   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4_s_net(2)
+    SLICE_X29Y55.COUT    Topcyc                0.423   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X29Y56.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X29Y56.BMUX    Tcinb                 0.335   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X27Y57.B4      net (fanout=2)        0.809   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8_s_net(5)
+    SLICE_X27Y57.CMUX    Topbc                 0.673   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X28Y58.A4      net (fanout=1)        0.687   sift_x0/gaussian_filter2_360262754e/cmult1_p_net_x0(8)
+    SLICE_X28Y58.DMUX    Topad                 0.734   sift_x0/delay1_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X31Y60.D5      net (fanout=2)        0.529   sift_x0/gaussian_filter2_360262754e/addsub_s_net(11)
+    SLICE_X31Y60.COUT    Topcyd                0.392   sift_x0/delay1_q_net_x9(7)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X31Y61.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X31Y61.BMUX    Tcinb                 0.335   sift_x0/delay3_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X32Y63.B6      net (fanout=2)        0.683   sift_x0/gaussian_filter2_360262754e/addsub3_s_net(13)
+    SLICE_X32Y63.CMUX    Topbc                 0.658   sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk00000036
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X34Y67.C4      net (fanout=3)        0.892   sift_x0/addsub4_s_net_x2(14)
+    SLICE_X34Y67.COUT    Topcyc                0.423   sift_x0/delay4_q_net_x14(7)
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X34Y68.BMUX    Tcinb                 0.335   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X33Y69.C1      net (fanout=1)        0.916   sift_x0/addsub2/core_s(17)
+    SLICE_X33Y69.C       Tilo                  0.094   sift_x0/delay1_q_net_x15(7)
+                                                       sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A6      net (fanout=1)        0.427   sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/result12_cmp_eq000099
+    SLICE_X33Y72.D6      net (fanout=17)       0.360   sift_x0/addsub2/result12_cmp_eq0000
+    SLICE_X33Y72.D       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/conv_s(1)1
+    SLICE_X30Y77.B5      net (fanout=26)       0.880   sift_x0/addsub2_s_net_x12(1)
+    SLICE_X30Y77.B       Tilo                  0.094   sift_x0/delay3_q_net_x8(7)
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel2
+    SLICE_X33Y77.AX      net (fanout=1)        0.793   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel1
+    SLICE_X33Y77.AMUX    Taxa                  0.313   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational4/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel1
+    SLICE_X33Y80.A6      net (fanout=1)        0.655   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel2
+    SLICE_X33Y80.CLK     Tas                   0.026   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/result_16_3_rel21
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational6/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.683ns (7.887ns logic, 8.796ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0 (SLICE_X32Y78.B6), 3394395360 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.842ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.566ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.241ns (1.209 - 1.450)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y11.DOADOL0 Trcko_DORA            2.180   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X31Y54.A5      net (fanout=3)        0.628   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/single_port_ram_data_out_net_x11(0)
+    SLICE_X31Y54.CMUX    Topac                 0.684   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/sig00000020
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X29Y55.C5      net (fanout=1)        0.537   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4_s_net(2)
+    SLICE_X29Y55.COUT    Topcyc                0.423   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X29Y56.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X29Y56.BMUX    Tcinb                 0.335   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X27Y57.B4      net (fanout=2)        0.809   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8_s_net(5)
+    SLICE_X27Y57.CMUX    Topbc                 0.673   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X28Y58.A4      net (fanout=1)        0.687   sift_x0/gaussian_filter2_360262754e/cmult1_p_net_x0(8)
+    SLICE_X28Y58.DMUX    Topad                 0.734   sift_x0/delay1_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X31Y60.D5      net (fanout=2)        0.529   sift_x0/gaussian_filter2_360262754e/addsub_s_net(11)
+    SLICE_X31Y60.COUT    Topcyd                0.392   sift_x0/delay1_q_net_x9(7)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X31Y61.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X31Y61.BMUX    Tcinb                 0.335   sift_x0/delay3_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X32Y63.B6      net (fanout=2)        0.683   sift_x0/gaussian_filter2_360262754e/addsub3_s_net(13)
+    SLICE_X32Y63.CMUX    Topbc                 0.658   sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk00000036
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X34Y67.C4      net (fanout=3)        0.892   sift_x0/addsub4_s_net_x2(14)
+    SLICE_X34Y67.COUT    Topcyc                0.423   sift_x0/delay4_q_net_x14(7)
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X34Y68.BMUX    Tcinb                 0.335   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X33Y69.C1      net (fanout=1)        0.916   sift_x0/addsub2/core_s(17)
+    SLICE_X33Y69.C       Tilo                  0.094   sift_x0/delay1_q_net_x15(7)
+                                                       sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A6      net (fanout=1)        0.427   sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/result12_cmp_eq000099
+    SLICE_X33Y72.D6      net (fanout=17)       0.360   sift_x0/addsub2/result12_cmp_eq0000
+    SLICE_X33Y72.D       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/conv_s(1)1
+    SLICE_X32Y79.D1      net (fanout=26)       1.185   sift_x0/addsub2_s_net_x12(1)
+    SLICE_X32Y79.D       Tilo                  0.094   sift_x0/delay3_q_net_x7(3)
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+    SLICE_X32Y75.CX      net (fanout=1)        0.484   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel1
+    SLICE_X32Y75.CMUX    Taxc                  0.335   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel1
+    SLICE_X32Y78.B6      net (fanout=1)        0.543   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+    SLICE_X32Y78.CLK     Tas                   0.003   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel21
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.566ns (7.886ns logic, 8.680ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.840ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.564ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.241ns (1.209 - 1.450)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y11.DOADOL0 Trcko_DORA            2.180   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X31Y54.A5      net (fanout=3)        0.628   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/single_port_ram_data_out_net_x11(0)
+    SLICE_X31Y54.CMUX    Topac                 0.684   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/sig00000020
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X29Y55.C5      net (fanout=1)        0.537   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4_s_net(2)
+    SLICE_X29Y55.COUT    Topcyc                0.423   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X29Y56.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X29Y56.BMUX    Tcinb                 0.335   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X27Y57.B4      net (fanout=2)        0.809   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8_s_net(5)
+    SLICE_X27Y57.CMUX    Topbc                 0.673   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X28Y58.A4      net (fanout=1)        0.687   sift_x0/gaussian_filter2_360262754e/cmult1_p_net_x0(8)
+    SLICE_X28Y58.BMUX    Topab                 0.487   sift_x0/delay1_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X31Y60.B4      net (fanout=2)        0.665   sift_x0/gaussian_filter2_360262754e/addsub_s_net(9)
+    SLICE_X31Y60.COUT    Topcyb                0.501   sift_x0/delay1_q_net_x9(7)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000037
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X31Y61.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X31Y61.BMUX    Tcinb                 0.335   sift_x0/delay3_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X32Y63.B6      net (fanout=2)        0.683   sift_x0/gaussian_filter2_360262754e/addsub3_s_net(13)
+    SLICE_X32Y63.CMUX    Topbc                 0.658   sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk00000036
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X34Y67.C4      net (fanout=3)        0.892   sift_x0/addsub4_s_net_x2(14)
+    SLICE_X34Y67.COUT    Topcyc                0.423   sift_x0/delay4_q_net_x14(7)
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X34Y68.BMUX    Tcinb                 0.335   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X33Y69.C1      net (fanout=1)        0.916   sift_x0/addsub2/core_s(17)
+    SLICE_X33Y69.C       Tilo                  0.094   sift_x0/delay1_q_net_x15(7)
+                                                       sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A6      net (fanout=1)        0.427   sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/result12_cmp_eq000099
+    SLICE_X33Y72.D6      net (fanout=17)       0.360   sift_x0/addsub2/result12_cmp_eq0000
+    SLICE_X33Y72.D       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/conv_s(1)1
+    SLICE_X32Y79.D1      net (fanout=26)       1.185   sift_x0/addsub2_s_net_x12(1)
+    SLICE_X32Y79.D       Tilo                  0.094   sift_x0/delay3_q_net_x7(3)
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+    SLICE_X32Y75.CX      net (fanout=1)        0.484   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel1
+    SLICE_X32Y75.CMUX    Taxc                  0.335   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel1
+    SLICE_X32Y78.B6      net (fanout=1)        0.543   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+    SLICE_X32Y78.CLK     Tas                   0.003   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel21
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.564ns (7.748ns logic, 8.816ns route)
+                                                       (46.8% logic, 53.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.830ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.554ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.241ns (1.209 - 1.450)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X2Y11.DOADOL0 Trcko_DORA            2.180   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer2_a40a7821c7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X31Y54.A5      net (fanout=3)        0.628   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/single_port_ram_data_out_net_x11(0)
+    SLICE_X31Y54.DMUX    Topad                 0.743   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/sig00000020
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X29Y55.D4      net (fanout=1)        0.497   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add4_s_net(3)
+    SLICE_X29Y55.COUT    Topcyd                0.392   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X29Y56.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X29Y56.BMUX    Tcinb                 0.335   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X27Y57.B4      net (fanout=2)        0.809   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add8_s_net(5)
+    SLICE_X27Y57.CMUX    Topbc                 0.673   sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001d
+                                                       sift_x0/gaussian_filter2_360262754e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X28Y58.A4      net (fanout=1)        0.687   sift_x0/gaussian_filter2_360262754e/cmult1_p_net_x0(8)
+    SLICE_X28Y58.DMUX    Topad                 0.734   sift_x0/delay1_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X31Y60.D5      net (fanout=2)        0.529   sift_x0/gaussian_filter2_360262754e/addsub_s_net(11)
+    SLICE_X31Y60.COUT    Topcyd                0.392   sift_x0/delay1_q_net_x9(7)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X31Y61.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X31Y61.BMUX    Tcinb                 0.335   sift_x0/delay3_q_net_x9(3)
+                                                       sift_x0/gaussian_filter2_360262754e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X32Y63.B6      net (fanout=2)        0.683   sift_x0/gaussian_filter2_360262754e/addsub3_s_net(13)
+    SLICE_X32Y63.CMUX    Topbc                 0.658   sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk00000036
+                                                       sift_x0/gaussian_filter2_360262754e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X34Y67.C4      net (fanout=3)        0.892   sift_x0/addsub4_s_net_x2(14)
+    SLICE_X34Y67.COUT    Topcyc                0.423   sift_x0/delay4_q_net_x14(7)
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X34Y68.BMUX    Tcinb                 0.335   sift_x0/addsub2/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub2/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X33Y69.C1      net (fanout=1)        0.916   sift_x0/addsub2/core_s(17)
+    SLICE_X33Y69.C       Tilo                  0.094   sift_x0/delay1_q_net_x15(7)
+                                                       sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A6      net (fanout=1)        0.427   sift_x0/addsub2/result12_cmp_eq000095
+    SLICE_X33Y72.A       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/result12_cmp_eq000099
+    SLICE_X33Y72.D6      net (fanout=17)       0.360   sift_x0/addsub2/result12_cmp_eq0000
+    SLICE_X33Y72.D       Tilo                  0.094   sift_x0/delay_q_net_x14(1)
+                                                       sift_x0/addsub2/conv_s(1)1
+    SLICE_X32Y79.D1      net (fanout=26)       1.185   sift_x0/addsub2_s_net_x12(1)
+    SLICE_X32Y79.D       Tilo                  0.094   sift_x0/delay3_q_net_x7(3)
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+    SLICE_X32Y75.CX      net (fanout=1)        0.484   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel1
+    SLICE_X32Y75.CMUX    Taxc                  0.335   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel1
+    SLICE_X32Y78.B6      net (fanout=1)        0.543   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel2
+    SLICE_X32Y78.CLK     Tas                   0.003   sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/result_16_3_rel21
+                                                       sift_x0/minima1_14bf128444/subsystem2_2a6c0a7987/relational5/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.554ns (7.914ns logic, 8.640ns route)
+                                                       (47.8% logic, 52.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0 (SLICE_X33Y62.D5), 4525855382 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.821ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAM)
+  Destination:          sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.499ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.287ns (1.205 - 1.492)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP to sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X4Y7.DOADOL1  Trcko_DOWA            2.180   sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+                                                       sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    SLICE_X48Y39.B6      net (fanout=3)        0.739   sift_x0/gaussian_filter1_59aae9082e/dual_port_ram_douta_net_x4(1)
+    SLICE_X48Y39.DMUX    Topbd                 0.701   sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/register_q_net(8)
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_instance0/blk00000001/blk0000001b
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X43Y40.D6      net (fanout=2)        0.707   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13_s_net(3)
+    SLICE_X43Y40.COUT    Topcyd                0.392   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X43Y41.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X43Y41.AMUX    Tcina                 0.271   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X40Y44.A5      net (fanout=1)        0.538   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18_s_net(4)
+    SLICE_X40Y44.DMUX    Topad                 0.734   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001e
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X37Y46.B6      net (fanout=1)        0.668   sift_x0/gaussian_filter1_59aae9082e/cmult1_p_net_x0(9)
+    SLICE_X37Y46.DMUX    Topbd                 0.717   sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/sig00000041
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/blk00000034
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X35Y49.D4      net (fanout=2)        0.976   sift_x0/gaussian_filter1_59aae9082e/addsub_s_net(11)
+    SLICE_X35Y49.COUT    Topcyd                0.392   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X35Y50.CIN     net (fanout=1)        0.010   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X35Y50.AMUX    Tcina                 0.271   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000048
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X33Y52.AX      net (fanout=2)        0.520   sift_x0/gaussian_filter1_59aae9082e/addsub3_s_net(12)
+    SLICE_X33Y52.CMUX    Taxd                  0.622   sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X29Y52.C5      net (fanout=3)        0.646   sift_x0/addsub4_s_net_x1(14)
+    SLICE_X29Y52.COUT    Topcyc                0.423   sift_x0/addsub/comp8.core_instance8/blk00000001/sig0000004e
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X29Y53.CIN     net (fanout=1)        0.000   sift_x0/addsub/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X29Y53.BMUX    Tcinb                 0.335   sift_x0/addsub/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X29Y54.D1      net (fanout=1)        0.863   sift_x0/addsub/core_s(17)
+    SLICE_X29Y54.D       Tilo                  0.094   sift_x0/addsub/result12_cmp_eq000095
+                                                       sift_x0/addsub/result12_cmp_eq000095
+    SLICE_X29Y58.A6      net (fanout=1)        0.481   sift_x0/addsub/result12_cmp_eq000095
+    SLICE_X29Y58.A       Tilo                  0.094   sift_x0/delay_q_net_x8(3)
+                                                       sift_x0/addsub/result12_cmp_eq000099
+    SLICE_X29Y60.C5      net (fanout=15)       0.433   sift_x0/addsub/result12_cmp_eq0000
+    SLICE_X29Y60.C       Tilo                  0.094   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational7/op_mem_32_22_0
+                                                       sift_x0/addsub/conv_s(1)1
+    SLICE_X29Y59.A2      net (fanout=26)       0.852   sift_x0/addsub_s_net_x8(1)
+    SLICE_X29Y59.A       Tilo                  0.094   sift_x0/delay_q_net_x9(5)
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel2
+    SLICE_X29Y59.B5      net (fanout=1)        0.381   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1
+    SLICE_X29Y59.BMUX    Tilo                  0.247   sift_x0/delay_q_net_x9(5)
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1_SW4
+    SLICE_X33Y62.C6      net (fanout=1)        0.676   N528
+    SLICE_X33Y62.C       Tilo                  0.094   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1
+    SLICE_X33Y62.D5      net (fanout=1)        0.226   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel2
+    SLICE_X33Y62.CLK     Tas                   0.028   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel21
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.499ns (7.783ns logic, 8.716ns route)
+                                                       (47.2% logic, 52.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.805ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAM)
+  Destination:          sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.483ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.287ns (1.205 - 1.492)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP to sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X4Y7.DOADOL1  Trcko_DOWA            2.180   sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+                                                       sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/dual_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    SLICE_X48Y39.B6      net (fanout=3)        0.739   sift_x0/gaussian_filter1_59aae9082e/dual_port_ram_douta_net_x4(1)
+    SLICE_X48Y39.DMUX    Topbd                 0.701   sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/register_q_net(8)
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_instance0/blk00000001/blk0000001b
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X43Y40.D6      net (fanout=2)        0.707   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13_s_net(3)
+    SLICE_X43Y40.COUT    Topcyd                0.392   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X43Y41.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X43Y41.AMUX    Tcina                 0.271   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X40Y44.A5      net (fanout=1)        0.538   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18_s_net(4)
+    SLICE_X40Y44.DMUX    Topad                 0.734   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001e
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X37Y46.B6      net (fanout=1)        0.668   sift_x0/gaussian_filter1_59aae9082e/cmult1_p_net_x0(9)
+    SLICE_X37Y46.DMUX    Topbd                 0.717   sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/sig00000041
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/blk00000034
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X35Y49.D4      net (fanout=2)        0.976   sift_x0/gaussian_filter1_59aae9082e/addsub_s_net(11)
+    SLICE_X35Y49.COUT    Topcyd                0.392   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X35Y50.CIN     net (fanout=1)        0.010   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X35Y50.AMUX    Tcina                 0.271   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000048
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X33Y52.A6      net (fanout=2)        0.442   sift_x0/gaussian_filter1_59aae9082e/addsub3_s_net(12)
+    SLICE_X33Y52.CMUX    Topac                 0.684   sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/blk00000037
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X29Y52.C5      net (fanout=3)        0.646   sift_x0/addsub4_s_net_x1(14)
+    SLICE_X29Y52.COUT    Topcyc                0.423   sift_x0/addsub/comp8.core_instance8/blk00000001/sig0000004e
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X29Y53.CIN     net (fanout=1)        0.000   sift_x0/addsub/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X29Y53.BMUX    Tcinb                 0.335   sift_x0/addsub/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X29Y54.D1      net (fanout=1)        0.863   sift_x0/addsub/core_s(17)
+    SLICE_X29Y54.D       Tilo                  0.094   sift_x0/addsub/result12_cmp_eq000095
+                                                       sift_x0/addsub/result12_cmp_eq000095
+    SLICE_X29Y58.A6      net (fanout=1)        0.481   sift_x0/addsub/result12_cmp_eq000095
+    SLICE_X29Y58.A       Tilo                  0.094   sift_x0/delay_q_net_x8(3)
+                                                       sift_x0/addsub/result12_cmp_eq000099
+    SLICE_X29Y60.C5      net (fanout=15)       0.433   sift_x0/addsub/result12_cmp_eq0000
+    SLICE_X29Y60.C       Tilo                  0.094   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational7/op_mem_32_22_0
+                                                       sift_x0/addsub/conv_s(1)1
+    SLICE_X29Y59.A2      net (fanout=26)       0.852   sift_x0/addsub_s_net_x8(1)
+    SLICE_X29Y59.A       Tilo                  0.094   sift_x0/delay_q_net_x9(5)
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel2
+    SLICE_X29Y59.B5      net (fanout=1)        0.381   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1
+    SLICE_X29Y59.BMUX    Tilo                  0.247   sift_x0/delay_q_net_x9(5)
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1_SW4
+    SLICE_X33Y62.C6      net (fanout=1)        0.676   N528
+    SLICE_X33Y62.C       Tilo                  0.094   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1
+    SLICE_X33Y62.D5      net (fanout=1)        0.226   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel2
+    SLICE_X33Y62.CLK     Tas                   0.028   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel21
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.483ns (7.845ns logic, 8.638ns route)
+                                                       (47.6% logic, 52.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -6.801ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virtex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP (RAM)
+  Destination:          sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      16.546ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.220ns (1.205 - 1.425)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virtex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP to sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB36_X4Y8.DOADOU1  Trcko_DORA            2.180   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row6_007da3360f/virtex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/row9_4c6a599104/virtex2_line_buffer3_60743c0a43/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP
+    SLICE_X48Y39.B5      net (fanout=2)        0.786   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/single_port_ram_data_out_net_x24(1)
+    SLICE_X48Y39.DMUX    Topbd                 0.701   sift_x0/gaussian_filter1_59aae9082e/virtex_line_buffer_a29e816750/register_q_net(8)
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_instance0/blk00000001/blk0000001b
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13/comp0.core_instance0/blk00000001/blk0000000c
+    SLICE_X43Y40.D6      net (fanout=2)        0.707   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add13_s_net(3)
+    SLICE_X43Y40.COUT    Topcyd                0.392   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000023
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk0000001c
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk0000000e
+    SLICE_X43Y41.CIN     net (fanout=1)        0.000   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000023
+    SLICE_X43Y41.AMUX    Tcina                 0.271   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/sig00000027
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18/comp1.core_instance1/blk00000001/blk00000006
+    SLICE_X40Y44.A5      net (fanout=1)        0.538   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add18_s_net(4)
+    SLICE_X40Y44.DMUX    Topad                 0.734   sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/sig0000002a
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk0000001e
+                                                       sift_x0/gaussian_filter1_59aae9082e/subsystem_831c6341cb/add2/comp2.core_instance2/blk00000001/blk00000008
+    SLICE_X37Y46.B6      net (fanout=1)        0.668   sift_x0/gaussian_filter1_59aae9082e/cmult1_p_net_x0(9)
+    SLICE_X37Y46.DMUX    Topbd                 0.717   sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/sig00000041
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/blk00000034
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub/comp3.core_instance3/blk00000001/blk00000012
+    SLICE_X35Y49.D4      net (fanout=2)        0.976   sift_x0/gaussian_filter1_59aae9082e/addsub_s_net(11)
+    SLICE_X35Y49.COUT    Topcyd                0.392   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk00000035
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk00000014
+    SLICE_X35Y50.CIN     net (fanout=1)        0.010   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000044
+    SLICE_X35Y50.AMUX    Tcina                 0.271   sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/sig00000048
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub3/comp6.core_instance6/blk00000001/blk0000000c
+    SLICE_X33Y52.AX      net (fanout=2)        0.520   sift_x0/gaussian_filter1_59aae9082e/addsub3_s_net(12)
+    SLICE_X33Y52.CMUX    Taxd                  0.622   sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/sig0000004b
+                                                       sift_x0/gaussian_filter1_59aae9082e/addsub4/comp7.core_instance7/blk00000001/blk0000000e
+    SLICE_X29Y52.C5      net (fanout=3)        0.646   sift_x0/addsub4_s_net_x1(14)
+    SLICE_X29Y52.COUT    Topcyc                0.423   sift_x0/addsub/comp8.core_instance8/blk00000001/sig0000004e
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000038
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000010
+    SLICE_X29Y53.CIN     net (fanout=1)        0.000   sift_x0/addsub/comp8.core_instance8/blk00000001/sig0000004e
+    SLICE_X29Y53.BMUX    Tcinb                 0.335   sift_x0/addsub/comp8.core_instance8/blk00000001/sig00000052
+                                                       sift_x0/addsub/comp8.core_instance8/blk00000001/blk00000008
+    SLICE_X29Y54.D1      net (fanout=1)        0.863   sift_x0/addsub/core_s(17)
+    SLICE_X29Y54.D       Tilo                  0.094   sift_x0/addsub/result12_cmp_eq000095
+                                                       sift_x0/addsub/result12_cmp_eq000095
+    SLICE_X29Y58.A6      net (fanout=1)        0.481   sift_x0/addsub/result12_cmp_eq000095
+    SLICE_X29Y58.A       Tilo                  0.094   sift_x0/delay_q_net_x8(3)
+                                                       sift_x0/addsub/result12_cmp_eq000099
+    SLICE_X29Y60.C5      net (fanout=15)       0.433   sift_x0/addsub/result12_cmp_eq0000
+    SLICE_X29Y60.C       Tilo                  0.094   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational7/op_mem_32_22_0
+                                                       sift_x0/addsub/conv_s(1)1
+    SLICE_X29Y59.A2      net (fanout=26)       0.852   sift_x0/addsub_s_net_x8(1)
+    SLICE_X29Y59.A       Tilo                  0.094   sift_x0/delay_q_net_x9(5)
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel2
+    SLICE_X29Y59.B5      net (fanout=1)        0.381   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1
+    SLICE_X29Y59.BMUX    Tilo                  0.247   sift_x0/delay_q_net_x9(5)
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1_SW4
+    SLICE_X33Y62.C6      net (fanout=1)        0.676   N528
+    SLICE_X33Y62.C       Tilo                  0.094   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel1
+    SLICE_X33Y62.D5      net (fanout=1)        0.226   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel2
+    SLICE_X33Y62.CLK     Tas                   0.028   sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/result_18_3_rel21
+                                                       sift_x0/maxima1_905a1e75b5/subsystem1_d7c3e0e1a7/relational/op_mem_32_22_0
+    -------------------------------------------------  ---------------------------
+    Total                                     16.546ns (7.783ns logic, 8.763ns route)
+                                                       (47.0% logic, 53.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk_55e9a606 = PERIOD TIMEGRP "clk_55e9a606" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAMB36_X2Y17.ADDRBL11), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.220ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp (FF)
+  Destination:          sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.408ns (Levels of Logic = 0)
+  Clock Path Skew:      0.188ns (0.712 - 0.524)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp to sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X31Y88.DQ         Tcko                  0.414   sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_q_net(7)
+                                                          sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp
+    RAMB36_X2Y17.ADDRBL11   net (fanout=1)        0.288   sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_q_net(7)
+    RAMB36_X2Y17.CLKBWRCLKL Trckc_ADDRB (-Th)     0.294   sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+                                                          sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.408ns (0.120ns logic, 0.288ns route)
+                                                          (29.4% logic, 70.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAMB36_X2Y17.ADDRBL12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.223ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp (FF)
+  Destination:          sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.417ns (Levels of Logic = 0)
+  Clock Path Skew:      0.194ns (0.712 - 0.518)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp to sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X31Y89.AQ         Tcko                  0.414   sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_q_net(10)
+                                                          sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp
+    RAMB36_X2Y17.ADDRBL12   net (fanout=1)        0.297   sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/register_q_net(8)
+    RAMB36_X2Y17.CLKBWRCLKL Trckc_ADDRB (-Th)     0.294   sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+                                                          sift_x0/window_generator4_1238959b71/virtex_line_buffer1_716e9e469b/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.417ns (0.120ns logic, 0.297ns route)
+                                                          (28.8% logic, 71.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAMB36_X2Y16.ADDRBL12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.228ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp (FF)
+  Destination:          sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.417ns (Levels of Logic = 0)
+  Clock Path Skew:      0.189ns (0.730 - 0.541)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp to sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X31Y84.BQ         Tcko                  0.414   sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/register_q_net(10)
+                                                          sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp
+    RAMB36_X2Y16.ADDRBL12   net (fanout=1)        0.297   sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/register_q_net(8)
+    RAMB36_X2Y16.CLKBWRCLKL Trckc_ADDRB (-Th)     0.294   sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+                                                          sift_x0/window_generator3_a4dba0e85a/virtex_line_buffer_16e10a05b3/dual_port_ram/comp1.core_instance1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/TRUE_DP.SINGLE_PRIM18.TDP
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.417ns (0.120ns logic, 0.297ns route)
+                                                          (28.8% logic, 71.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_55e9a606 = PERIOD TIMEGRP "clk_55e9a606" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.778ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.222ns (450.045MHz) (Trper_CLKA)
+  Physical resource: sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP/CLKAL
+  Logical resource: sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP/CLKAL
+  Location pin: RAMB36_X0Y6.CLKARDCLKL
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.778ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.222ns (450.045MHz) (Trper_CLKA)
+  Physical resource: sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP/REGCLKAL
+  Logical resource: sift_x0/gaussian_filter_75f41107d3/virtex2_line_buffer_4f81118249/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP/REGCLKAL
+  Location pin: RAMB36_X0Y6.REGCLKARDRCLKL
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.778ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.222ns (450.045MHz) (Trper_CLKA)
+  Physical resource: sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP/CLKAL
+  Logical resource: sift_x0/gaussian_filter_75f41107d3/subsystem_831c6341cb/row8_8879eae491/virtex2_line_buffer_c1bb50b4d7/single_port_ram/comp0.core_instance0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_init.ram/SP.SINGLE_PRIM18.SP/CLKAL
+  Location pin: RAMB36_X0Y3.CLKARDCLKL
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   16.923|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 274  Score: 1364224  (Setup/Max: 1364224, Hold: 0)
+
+Constraints cover 224788644500 paths, 0 nets, and 15765 connections
+
+Design statistics:
+   Minimum period:  16.923ns{1}   (Maximum frequency:  59.091MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Jul 05 09:20:37 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4827 MB
+
+
+

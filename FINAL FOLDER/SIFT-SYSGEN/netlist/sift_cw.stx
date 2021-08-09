@@ -1,0 +1,98 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/sift.vhd" in Library work.
+Architecture addsb_11_0_30d1457599ad93f1_a of Entity addsb_11_0_30d1457599ad93f1 is up to date.
+Architecture addsb_11_0_425ea38a5c924775_a of Entity addsb_11_0_425ea38a5c924775 is up to date.
+Architecture addsb_11_0_7094c587598cfa37_a of Entity addsb_11_0_7094c587598cfa37 is up to date.
+Architecture addsb_11_0_7ae34980b4a72e6c_a of Entity addsb_11_0_7ae34980b4a72e6c is up to date.
+Architecture addsb_11_0_c8834dcbd5945abc_a of Entity addsb_11_0_c8834dcbd5945abc is up to date.
+Architecture addsb_11_0_d6c5b08d70f432d4_a of Entity addsb_11_0_d6c5b08d70f432d4 is up to date.
+Architecture addsb_11_0_e25ad78e4233698a_a of Entity addsb_11_0_e25ad78e4233698a is up to date.
+Architecture addsb_11_0_ea646992679bcc81_a of Entity addsb_11_0_ea646992679bcc81 is up to date.
+Architecture bmg_72_3e1ab284fecfe373_a of Entity bmg_72_3e1ab284fecfe373 is up to date.
+Architecture bmg_72_410b3d3227446c03_a of Entity bmg_72_410b3d3227446c03 is up to date.
+Architecture bmg_72_6f9d105f6f5129b9_a of Entity bmg_72_6f9d105f6f5129b9 is up to date.
+Architecture cmlt_11_2_13bc97a43f38db15_a of Entity cmlt_11_2_13bc97a43f38db15 is up to date.
+Architecture cmlt_11_2_3040979a47684d1c_a of Entity cmlt_11_2_3040979a47684d1c is up to date.
+Architecture cmlt_11_2_4ff21534f5d532d3_a of Entity cmlt_11_2_4ff21534f5d532d3 is up to date.
+Architecture cmlt_11_2_515a5d7db7c97088_a of Entity cmlt_11_2_515a5d7db7c97088 is up to date.
+Architecture cmlt_11_2_5496cf9983a43407_a of Entity cmlt_11_2_5496cf9983a43407 is up to date.
+Architecture cmlt_11_2_9872e8b7ce5da253_a of Entity cmlt_11_2_9872e8b7ce5da253 is up to date.
+Architecture cntr_11_0_408dad9701d8fb61_a of Entity cntr_11_0_408dad9701d8fb61 is up to date.
+Architecture cntr_11_0_467594213c284489_a of Entity cntr_11_0_467594213c284489 is up to date.
+Architecture cntr_11_0_f08a9e8f3d5b5bdb_a of Entity cntr_11_0_f08a9e8f3d5b5bdb is up to date.
+Architecture conv_pkg of Entity conv_pkg is up to date.
+Architecture structural of Entity srl17e is up to date.
+Architecture structural of Entity synth_reg is up to date.
+Architecture behav of Entity synth_reg_reg is up to date.
+Architecture structural of Entity single_reg_w_init is up to date.
+Architecture structural of Entity synth_reg_w_init is up to date.
+Architecture behavior of Entity constant_6293007044 is up to date.
+Architecture behavior of Entity xlcounter_limit_sift is up to date.
+Architecture behavior of Entity xlspram_sift is up to date.
+Architecture behavior of Entity xladdsub_sift is up to date.
+Architecture behavior of Entity xlcmult_sift is up to date.
+Architecture behavior of Entity xldelay is up to date.
+Architecture behavior of Entity constant_963ed6358a is up to date.
+Architecture behavior of Entity constant_109a05a45d is up to date.
+Architecture behavior of Entity constant_498bc68c14 is up to date.
+Architecture behavior of Entity xlcounter_free_sift is up to date.
+Architecture behavior of Entity xldpram_sift is up to date.
+Architecture behavior of Entity xlregister is up to date.
+Architecture behavior of Entity relational_0ffd72e037 is up to date.
+Architecture behavior of Entity relational_cef71be05b is up to date.
+Architecture behavior of Entity relational_ba5c6f1dfc is up to date.
+Architecture behavior of Entity constant_7fdf918d22 is up to date.
+Architecture behavior of Entity constant_a3923dd146 is up to date.
+Architecture behavior of Entity relational_2147430058 is up to date.
+Architecture behavior of Entity logical_691cfbc034 is up to date.
+Architecture behavior of Entity logical_1045fb331f is up to date.
+Architecture structural of Entity virtex2_line_buffer_entity_c1bb50b4d7 is up to date.
+Architecture structural of Entity row11_entity_7d49ab9ec0 is up to date.
+Architecture structural of Entity subsystem_entity_831c6341cb is up to date.
+Architecture structural of Entity virtex_line_buffer_entity_a29e816750 is up to date.
+Architecture structural of Entity gaussian_filter_entity_75f41107d3 is up to date.
+Architecture structural of Entity subsystem_entity_d161dbf7fc is up to date.
+Architecture structural of Entity subsystem2_entity_9d437adc7b is up to date.
+Architecture structural of Entity maxima_entity_f36dca9fb9 is up to date.
+Architecture structural of Entity subsystem_entity_1998dcc4bb is up to date.
+Architecture structural of Entity subsystem1_entity_632ff6b114 is up to date.
+Architecture structural of Entity subsystem2_entity_2a6c0a7987 is up to date.
+Architecture structural of Entity minima_entity_704bc545e6 is up to date.
+Architecture structural of Entity virtex_line_buffer_entity_16e10a05b3 is up to date.
+Architecture structural of Entity window_generator_entity_68334b248c is up to date.
+Architecture structural of Entity sift is up to date.
+Compiling vhdl file "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/sift_cw.vhd" in Library work.
+Architecture behavior of Entity xlclockdriver is up to date.
+Architecture structural of Entity default_clock_driver_sift is up to date.
+Architecture structural of Entity sift_cw is up to date.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.75 secs
+ 
+--> 
+
+Total memory usage is 4492572 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

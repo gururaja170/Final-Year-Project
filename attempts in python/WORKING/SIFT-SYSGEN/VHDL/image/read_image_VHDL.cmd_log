@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/VHDL/image/read_image_VHDL.xst" -ofn "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/VHDL/image/read_image_VHDL.syr" 
+xst -intstyle ise -ifn "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/VHDL/image/read_image_VHDL.xst" -ofn "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/WORKING/SIFT-SYSGEN/VHDL/image/read_image_VHDL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "read_image_VHDL.ngc" read_image_VHDL.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o read_image_VHDL_map.ncd read_image_VHDL.ngd read_image_VHDL.pcf 
+par -w -intstyle ise -ol high -mt off read_image_VHDL_map.ncd read_image_VHDL.ncd read_image_VHDL.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml read_image_VHDL.twx read_image_VHDL.ncd -o read_image_VHDL.twr read_image_VHDL.pcf 

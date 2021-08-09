@@ -1,0 +1,214 @@
+Digilent Plugin: Plugin Version: 2.4.4
+Digilent Plugin: no JTAG device was found.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 2.5 MHz.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB22).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB23).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB24).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 2.5 MHz.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB25).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB26).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB27).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB28).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB29).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB210).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 2.5 MHz.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB211).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB212).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB213).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB214).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB215).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 6 MHz.
+Connecting to cable (Usb Port - USB216).
+Checking cable driver.
+ Source driver files not found.
+The Platform Cable USB is not detected. Please connect a cable.If a cable is connected, please disconnect
+and reconnect to the usb port, follow the instructions in the 'Found New Hardware Wizard', then retry
+the Cable Setup operation.
+Cable connection failed.
+Unsupported frequency.  Using default frequency: 2.5 MHz.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+Your driver installation is not complete. Please re-run your application or run
+install_drivers.exe from the ISE installation area as an Administrator to complete the driver installation.
+Service using windrvr6.sys : SYSTEM\CurrentControlSet\Services\WinDriver6.
+ ImagePath = \SystemRoot\system32\drivers\windrvr6.sys.
+ Start = 3.
+ ErrorControl = 1.
+ Type=1.
+Cable connection failed.

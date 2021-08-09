@@ -1,0 +1,94 @@
+V3 50
+FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" 2021/07/04.22:38:59 P.20131013
+PH work/conv_pkg 1625418542 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+PB work/conv_pkg 1625418543 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PH work/conv_pkg 1625418542
+EN work/single_reg_w_init 1625418544 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB work/conv_pkg 1625418543
+AR work/single_reg_w_init/structural 1625418545 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/single_reg_w_init 1625418544 CP fdre CP fdse
+EN work/synth_reg_w_init 1625418546 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB work/conv_pkg 1625418543
+AR work/synth_reg_w_init/structural 1625418547 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/synth_reg_w_init 1625418546 CP single_reg_w_init
+EN work/xlslicer 1625418548 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xlslicer/behavior 1625418549 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlslicer 1625418548
+EN work/xland2 1625418550 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xland2/behavior 1625418551 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xland2 1625418550
+EN work/xlreqgrantmanager 1625418552 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/xlreqgrantmanager/structural 1625418553 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlreqgrantmanager 1625418552
+EN work/xlmemmap 1625418554 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB work/conv_pkg 1625418543
+AR work/xlmemmap/behavioral 1625418555 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlmemmap 1625418554
+EN work/sysgen_hw_cosim_interface 1625418556 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB work/conv_pkg 1625418543
+AR work/sysgen_hw_cosim_interface/structural 1625418557 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/sysgen_hw_cosim_interface 1625418556 CP work/xlmemmap CP sift_cw
+EN work/xliobuf 1625418558 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xliobuf/structural 1625418559 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xliobuf 1625418558 CP IOBUF
+EN work/xlibuf 1625418560 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xlibuf/structural 1625418561 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlibuf 1625418560 CP IBUF
+EN work/xlobuf 1625418562 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xlobuf/structural 1625418563 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlobuf 1625418562 CP OBUF
+EN work/xlibufds 1625418564 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xlibufds/structural 1625418565 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlibufds 1625418564 CP IBUFDS
+EN work/xlobufds 1625418566 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/xlobufds/structural 1625418567 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlobufds 1625418566 CP OBUFDS
+EN work/xlclockgen 1625418568 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB unisim \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/xlclockgen/structural 1625418569 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/xlclockgen 1625418568 CP BUFGCE CP BUFG CP DCM
+EN work/jtagcosim_top 1625418570 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB work/conv_pkg 1625418543
+AR work/jtagcosim_top/structural 1625418571 \
+      FL "E:/PROJECTS/FINAL YEAR PROJECT/attempts in python/SIFT-SYSGEN/netlist/synth_wrapper/jtagcosim_top.vhd" \
+      EN work/jtagcosim_top 1625418570 CP BUFG CP BUFGMUX CP work/xlclockgen \
+      CP IBUFGDS CP jtagcosim_iface_virtex5 CP work/sysgen_hw_cosim_interface

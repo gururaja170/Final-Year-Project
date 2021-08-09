@@ -1,0 +1,28 @@
+Command line:
+   sift_cw_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63108
+
+Tue Jul 06 13:27:02 2021
+
+
+ Elaboration Time: 6.375 sec
+
+ Current Memory Usage: 6283.52 Meg
+
+ Total Signals          : 110715
+ Total Nets             : 1187618
+ Total Signal Drivers   : 42466
+ Total Blocks           : 28165
+ Total Primitive Blocks : 18835
+ Total Processes        : 36030
+ Total Traceable Variables  : 93041
+ Total Scalar Nets and Variables : 1425718
+
+ Total Simulation Time: 7.6875 sec
+
+ Current Memory Usage: 5811.66 Meg
+
+Tue Jul 06 13:29:18 2021
+

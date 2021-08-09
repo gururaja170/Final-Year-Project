@@ -1,0 +1,2 @@
+vhdl work "sift.vhd"
+vhdl work "sift_cw.vhd"

@@ -1,0 +1,2 @@
+vhdl isim_temp "sift.vhd"
+vhdl isim_temp "sift_cw.vhd"

@@ -1,0 +1,46 @@
+Release 14.7 Physical Synthesis Report P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc. All rights reserved.
+
+TABLE OF CONTENTS
+  1) Physical Synthesis Options Summary
+  2) Optimizations statistics and details
+
+
+=========================================================================
+*                 Physical Synthesis Options Summary                    *
+=========================================================================
+---- Options
+Global Optimization                 : OFF
+    Retiming                        : OFF
+    Equivalent Register Removal     : OFF
+Timing-Driven Packing and Placement : ON
+    Logic Optimization              : OFF
+    Register Duplication            : ON
+
+---- Intelligent clock gating       : OFF
+
+---- Target Parameters
+Target Device                       : 5vsx50tff1136-1
+
+=========================================================================
+
+
+=========================================================================
+*                        Optimizations                                  *
+=========================================================================
+---- Statistics
+   Number of LUTs added by Replication                       | 3               
+
+   Overall change in number of design objects                | +3               
+
+
+---- Details
+
+New or modified components                             | Optimization             | Objective           
+-------------------------------------------------------|--------------------------|----------------------
+sift_x0/addsub/conv_s(4)1_REPLICA_1                    | Replication              | Fanout Optimization
+sift_x0/addsub/conv_s(5)1_REPLICA_0                    | Replication              | Fanout Optimization
+sift_x0/addsub2/conv_s(1)1_REPLICA_2                   | Replication              | Fanout Optimization
+
+   Flops added for Enable Generation                       
+-------------------------
